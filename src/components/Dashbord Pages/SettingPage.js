@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./Navbar";
+import Nav from "../Navbar";
 import Profile from "./Profile";
 import Password from "./PasswordPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";

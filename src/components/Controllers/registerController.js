@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import { FaUserAlt, FaEnvelope, FaBan, FaBirthdayCake ,FaPhoneAlt} from "react-icons/fa";
+import {
+  FaUserAlt,
+  FaEnvelope,
+  FaBan,
+  FaBirthdayCake,
+  FaPhoneAlt,
+} from "react-icons/fa";
 export default function SignUp() {
   const params = useParams();
   const [users, setUsers] = useState([]);
@@ -26,8 +32,6 @@ export default function SignUp() {
         setUsers(res.data);
       })
       .catch((err) => console.log(err));
-
-      
   }, []);
   /* const handleClick = () => {
     let data = { FirsName, LastName, Email, Password };
@@ -55,19 +59,19 @@ avatar.role
    resetPasswordExpire: Date*/
   const handleClick = (event) => {
     //console.log("date : ",dateOfBirth)
-   // console.log("role : ",role)
+    // console.log("role : ",role)
     let data = {
       firstName: firstName,
       lastName: lastName,
       password: password,
-      telephone:parseInt(telephone) ,
+      telephone: parseInt(telephone),
       email: email,
       dateOfBirth: dateOfBirth,
       gender: gender,
-    //  avater: { public_id: public_id, role: role },
-      role:role
-    //  resetPasswordToken: resetPasswordToken,
-    //  resetPasswordExpire: resetPasswordExpire,
+      //  avater: { public_id: public_id, role: role },
+      role: role,
+      //  resetPasswordToken: resetPasswordToken,
+      //  resetPasswordExpire: resetPasswordExpire,
     };
 
     let exist = false; //to check if the user exist or ont
@@ -92,14 +96,13 @@ avatar.role
         .catch(function (error) {
           console.log(error);
         });
-        axios
+      axios
         .get("http://localhost:3500/User/")
         .then((res) => {
           setUsers(res.data);
         })
         .catch((err) => console.log(err));
-         navigate("/SignIn")
-
+      navigate("/SignIn");
     }
   };
 
@@ -172,12 +175,16 @@ avatar.role
                               <div className="input-group-text">
                                 <FaBirthdayCake />
                               </div>
-                              <input 
-                              style={{ padding: 12 }} 
-                              type="date" 
-                              onChange={(e) => setDateOfBirth(e.target.value)}/>
+                              <input
+                                style={{ padding: 12 }}
+                                type="date"
+                                onChange={(e) => setDateOfBirth(e.target.value)}
+                              />
                               <div className="form-outline flex-fill mb-0">
-                                <select  onChange={(e) => setrole(e.target.value)} style={{ padding: 12 }}>
+                                <select
+                                  onChange={(e) => setrole(e.target.value)}
+                                  style={{ padding: 12 }}
+                                >
                                   <option value="student">Student</option>
                                   <option value="instructor">Instructor</option>
                                 </select>

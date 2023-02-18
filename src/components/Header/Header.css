@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.greeting {
+  font-family: Book Antiqua;
+  color: SteelBlue;
+  font-size: large;
+}
+.wel {
+  color: midnightblue;
+  font-family: "Rockwell Extra Bold";
+}

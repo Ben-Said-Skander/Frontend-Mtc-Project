@@ -1,0 +1,29 @@
+.container {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  min-height: 100vh;
+}
+
+.dark-mode {
+  background-color: #131335;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+.dark-mode h3 {
+  color: white;
+}
+
+.cours {
+  font-family: "Hanalei Fill", cursive;
+  color: #e9967a;
+}
+
+.see {
+  font-family: "Goudy Old Style";
+  color: darkslateblue;
+}

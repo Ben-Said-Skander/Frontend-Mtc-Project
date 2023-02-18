@@ -1,0 +1,29 @@
+.course {
+  background-color: rgb(125, 177, 228);
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+}
+.coursImg {
+  border-radius: 8px;
+  width: 90%;
+}
+.course-delete {
+  float: right;
+  width: 20px;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: darkmagenta;
+  font-size: large;
+}
+.name {
+  font-family: "Hanalei Fill", cursive;
+  color: rgb(10, 8, 80);
+  font-size: large;
+}
