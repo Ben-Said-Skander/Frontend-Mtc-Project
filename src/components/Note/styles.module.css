@@ -1,0 +1,57 @@
+.note_container {
+  background-color: #f8f8f8;
+  padding: 40px 300px;
+}
+* {
+  background-color: #f8f8f8;
+}
+.blue_btn {
+  color: aliceblue;
+  padding: 12px 0;
+  background-color: #080039;
+  border-radius: 20px;
+  width: 200px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title {
+  color: #080039;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  min-height: 20vh;
+}
+
+.head {
+  color: #080039;
+  display: flex;
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+}
+.notes_list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.note {
+  background-color: #fef68a;
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  width: 100%;
+  color: #080039;
+  font-size: 26px;
+  font-weight: bold;
+}

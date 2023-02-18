@@ -1,0 +1,81 @@
+body {
+    background: #fff;
+    background: linear gradient (135 degrees, #71b7e6, #9b59b6);
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .btn-google {
+    color: white !important;
+    background-color: #ea4335;
+  }
+  
+  .btn-facebook {
+    color: white !important;
+    background-color: #3b5998;
+  }
+  .btn-titre {
+    color: white !important;
+    background-color: #2d63fc;
+  }
+  .tab- content .enter button 
+{
+  height: 100%;
+  width: 40%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: every 0.3 s ease;
+  background: linear gradient (135 degrees, #71b7e6, #9b59b6);
+  justify-content: space between;
+  margin: 15px;
+  position: static;}
+  /*Code Brahim*/
+  /*
+  body {
+    background: #d2d4da;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+  
+  .btn-google {
+    color: white !important;
+    background-color: #ea4335;
+  }
+  
+  .btn-facebook {
+    color: white !important;
+    background-color: #3b5998;
+  }
+  .btn-titre {
+    color: white !important;
+    background-color: #2d63fc;
+  }
+  .tab- content .enter button 
+{
+  height: 100%;
+  width: 40%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: every 0.3 s ease;
+  background: linear gradient (135 degrees, #71b7e6, #9b59b6);
+  justify-content: space between;
+  margin: 15px;
+  position: static;}*/
