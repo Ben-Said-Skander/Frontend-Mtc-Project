@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AddFiles from "./pages/AddFiles Page/AddFiles";
+import ListFiles from "./pages/AddFiles Page/ListFiles";
+
+import AddNotes from "./pages/Add Notes Page/AddNotes.js/AddNotes";
+import Notes from "./pages/Add Notes Page/Notes/Notes";
+
+import SignUp from "./pages/SignUp Page/SignUp";
+import SignIn from "./pages/SignIn Page/SignIn";
+
+import SettingPage from "./pages/Settings Pages/SettingPage";
+//import Nav from "./components/Navbar";
+
+import Profile from "./pages/Settings Pages/Pages/Profile";
+import Password from "./pages/Settings Pages/Pages/PasswordPage";
+import Interests from "./pages/Settings Pages/Pages/InterestsPage";
+
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        
+        <Routes>
+          <Route path="/AddFiles" element={<AddFiles />} />
+          <Route path="/ListFiles" element={<ListFiles />} />
+
+          <Route path="/AddNotes" element={<AddNotes />} />
+          <Route path="/Notes" element={<Notes />} />
+
+          <Route path="/Signup" element={<SignUp />} />
+          <Route path="/Signin" element={<SignIn />} />
+
+          <Route path="/Settings" element={<Profile />} />
+          <Route path="/Settings/Profile" element={<Profile />} />
+          <Route path="/Settings/Password" element={<Password />} />
+          <Route path="/Settings/Interests" element={<Interests />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
+//package 1: npm install pdfjs-dist@2.15.349
+//package 2: npm install @react-pdf-viewer/core@3.7.0
+//package 3: npm i @react-pdf-viewer/default-layout
+//package 4: npm i react-router-dom
+//package 5: npm install bootstrap@5.3.0-alpha1
