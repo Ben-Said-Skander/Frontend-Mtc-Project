@@ -1,40 +1,130 @@
 import React from "react";
-import styles from "./styles.module.css";
+import Styles from "./myStyles.module.css";
 const Sidebar = () => {
+  const [isLoaded, setLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    const baliseScript = document.createElement("script");
+    baliseScript.src = "./JSSidebar.js";
+    baliseScript.addEventListener("load", () => setLoaded(true));
+    document.body.appendChild(baliseScript);
+  }, []);
+
+  React.useEffect(() => {
+    if (isLoaded) {
+      // ...
+    }
+  }, [isLoaded]);
+
   return (
     <div>
-      <div class="sidebar">
-        {/*profile image & text*/}
+      <nav className={Styles.sidebar_c + " " + Styles.close}>
+        <header>
+          <div className={Styles.image_text}>
+            <span className={Styles.image}>
+              <img className={Styles.img} src="assets/images/logo.png" alt="" />
+            </span>
+          </div>
 
-        <div class="profile">
-          <img src="assets/images/pro.png" alt="img" />
-          <h3>Username</h3>
-          <p>BIO</p>
+          <i
+            className={
+              Styles.toggle +
+              " " +
+              Styles.i +
+              " " +
+              "fa fa-angle-double-left" +
+              " " +
+              "toggle"
+            }
+          ></i>
+        </header>
+
+        <div className={Styles.menu_bar}>
+          <div className={Styles.menu}>
+            <li className={Styles.search_box}>
+              <i
+                className={Styles.i + " " + Styles.icon + " " + "fa fa-search"}
+              ></i>
+              <input
+                className={Styles.input}
+                type="text"
+                placeholder="       search"
+              />
+            </li>
+
+            <ul className={Styles.menu_links}>
+              <li className={Styles.nav_link}>
+                <a className={Styles.a} href="#">
+                  <i
+                    className={
+                      Styles.i + " " + Styles.icon + " " + "fa fa-dashboard"
+                    }
+                  ></i>
+                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                    Dashboard
+                  </span>
+                </a>
+              </li>
+
+              <li className={Styles.nav_link}>
+                <a className={Styles.a} href="#">
+                  <i
+                    className={
+                      Styles.i + " " + Styles.icon + " " + "fa fa-clipboard "
+                    }
+                  ></i>
+                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                    All Courses
+                  </span>
+                </a>
+              </li>
+
+              <li className={Styles.nav_link}>
+                <a className={Styles.a} href="#">
+                  <i
+                    className={
+                      Styles.i + " " + Styles.icon + " " + "fa fa-calendar "
+                    }
+                  ></i>
+                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                    Schedules
+                  </span>
+                </a>
+              </li>
+
+              <li className={Styles.nav_link}>
+                <a className={Styles.a} href="#">
+                  <i
+                    className={
+                      Styles.i +
+                      " " +
+                      Styles.icon +
+                      " " +
+                      "fa fa-graduation-cap "
+                    }
+                  ></i>
+                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                    My Class
+                  </span>
+                </a>
+              </li>
+
+              <li className={Styles.nav_link}>
+                <a className={Styles.a} href="#">
+                  <i
+                    className={
+                      Styles.i + " " + Styles.icon + " " + "fa fa-cogs "
+                    }
+                  ></i>
+                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                    Settings
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-
-        {/*menu item*/}
-        <Link to="/Settings/Profile" class="nav">
-          {" "}
-          <i class="fa fa-user"></i>
-          <span>Dashbord</span>
-        </Link>
-
-        <Link to="/Settings/Password" class="nav">
-          <i class="fa fa-key"></i>
-          <span>Password</span>
-        </Link>
-
-        <Link to="/Settings/Interests" class="nav">
-          <i class="fa fa-thumb-tack"></i>
-          <span>Chat</span>
-        </Link>
-
-        <div class="logout">
-          {" "}
-          <i class="fa fa-sign-out "></i>
-          <span>Note and Reminders</span>{" "}
-        </div>
-      </div>
+      </nav>
     </div>
   );
 };

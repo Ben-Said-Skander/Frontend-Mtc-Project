@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./styles.module.css";
+
 const AddCourse = ({ handleAddCourse }) => {
   const [courseName, setCourseName] = useState("");
   const characterLimit = 20;

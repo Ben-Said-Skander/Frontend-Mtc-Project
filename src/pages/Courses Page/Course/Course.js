@@ -1,18 +1,18 @@
 import { MdDeleteForever } from "react-icons/md";
 import { Link } from "react-router-dom";
-import styles from "./styles.module.css";
+
 const Course = ({ id, name, handleDeleteCourse }) => {
   return (
-    <div className={styles.course}>
+    <div className="course">
       <table>
         <tr>
           <td>
             <span>
-              <b className={styles.name}>{name}</b>
+              <b className="name">{name}</b>
             </span>
           </td>
           <td>
-            <div className={styles.course}>
+            <div className="course-delete">
               <MdDeleteForever
                 onClick={() => handleDeleteCourse(id)}
                 className="delete-icon"

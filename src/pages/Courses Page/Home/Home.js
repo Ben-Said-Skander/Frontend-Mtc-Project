@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import CoursesList from "../CoursesList/CoursesList";
 import Header from "../Header/Header";
 import Search from "../Search Component/Search";
-import styles from "./styles.module.css";
+
 import { Link } from "react-router-dom";
 
 const App = () => {

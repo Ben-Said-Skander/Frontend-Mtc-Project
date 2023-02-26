@@ -1,20 +1,20 @@
 import React from "react";
-import styles from "./styles.module.css";
+
 const Header = ({ handleToggleDarkMode }) => {
   return (
     <div>
-      <div className={styles.header}>
-        <h1 className={styles.wel}>Welcom Alex</h1>
+      <div className="header">
+        <h1 className="wel">Welcome Alex</h1>
         <button
           onClick={() =>
             handleToggleDarkMode((previousDarkMode) => !previousDarkMode)
           }
-          className="{styles.save}"
+          className="save"
         >
           Dark Mode
         </button>
       </div>
-      <small className={styles.greeting}>You are going great, keep it up</small>
+      <small className="greeting">You are going great, keep it up</small>
     </div>
   );
 };

@@ -4,7 +4,6 @@ import Header from "../Header/Header";
 import Search from "../Search Component/Search";
 import Profs from "../../Instructors Page/Instructor List/InstructorList";
 import { Link } from "react-router-dom";
-import styles from "./styles.module.css";
 export default function AllCourses() {
   const [profs, setProfs] = useState([
     {
@@ -51,25 +50,25 @@ export default function AllCourses() {
 
   return (
     <div className={`${darkMode && "dark-mode"}`}>
-      <div className={styles.container}>
+      <div className="container">
         <Header handleToggleDarkMode={setDarkMode} />
         <br></br>
         <Search handleSearchCourse={setSearchName} />
-        <h1 className={styles.see}>All Courses</h1>
+        <h1 className="see">All Courses</h1>
 
-        <h2 className={styles.cours}>Math</h2>
+        <h2 className="cours">Math</h2>
         <Profs
           profs={profs.filter((prof) =>
             prof.name.toLowerCase().includes(searchName)
           )}
         />
-        <h2 className={styles.cours}>Phy</h2>
+        <h2 className="cours">Phy</h2>
         <Profs
           profs={profs.filter((prof) =>
             prof.name.toLowerCase().includes(searchName)
           )}
         />
-        <h2 className={styles.cours}>Gym</h2>
+        <h2 className="cours">Gym</h2>
         <Profs
           profs={profs.filter((prof) =>
             prof.name.toLowerCase().includes(searchName)

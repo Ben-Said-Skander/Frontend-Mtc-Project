@@ -1,4 +1,4 @@
-import styles from "./styles.module.css";
+
 
 const Prof = ({ id, name, age, education, experience, contact }) => {
   return (
