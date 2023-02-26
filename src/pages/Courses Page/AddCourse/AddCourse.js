@@ -18,7 +18,7 @@ const AddCourse = ({ handleAddCourse }) => {
   };
 
   return (
-    <div className={styles.course.new}>
+    <div className="course.new">
       <textarea
         rows="8"
         cols="10"
@@ -27,7 +27,7 @@ const AddCourse = ({ handleAddCourse }) => {
         onChange={handleChange}
       ></textarea>
       <div className="course-footer">
-        <button className={styles.save} onClick={handleSaveClick}>
+        <button className="save" onClick={handleSaveClick}>
           Save
         </button>
       </div>

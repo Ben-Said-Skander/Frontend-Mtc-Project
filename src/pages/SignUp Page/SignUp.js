@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "./style.module.css";
-
+import { Link } from "react-router-dom";
 export default function SignUp() {
   const params = useParams();
   const navigate = useNavigate();
@@ -108,9 +108,8 @@ export default function SignUp() {
                       <button
                         className="btn btn-primary btn-login text-uppercase fw-bold"
                         type="submit"
-                        onClick={handleClick}
                       >
-                        Register
+                        <Link to="/Signin">Register</Link>
                       </button>
                     </div>
                     <hr className="my-4" />

@@ -3,10 +3,10 @@ import { nanoid } from "nanoid";
 import CoursesList from "../CoursesList/CoursesList";
 import Header from "../Header/Header";
 import Search from "../Search Component/Search";
-
+import "./Home.css";
 import { Link } from "react-router-dom";
 
-const App = () => {
+const Dashbord = () => {
   const [courses, setCourses] = useState([
     {
       id: nanoid(),
@@ -74,7 +74,7 @@ const App = () => {
         />
 
         <h1 className="all">All Courses</h1>
-        <Link to="AllCourses">
+        <Link to="/AllCourses">
           <button className="btn">See All Courses</button>
         </Link>
 
@@ -93,4 +93,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Dashbord;

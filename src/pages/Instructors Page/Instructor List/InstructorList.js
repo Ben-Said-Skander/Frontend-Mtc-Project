@@ -1,5 +1,5 @@
 import Prof from "../Instructor/Instructor";
-
+import "./InstructorList.css";
 const Profs = ({ profs }) => {
   return (
     //affichage de la liste des profs

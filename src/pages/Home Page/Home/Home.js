@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
+import AboutUs from "../About Us/AboutUs";
 export default function Home() {
   return (
     <div>
@@ -90,13 +91,12 @@ export default function Home() {
                         <i className="fab fa-youtube" />
                       </a>
                     </div>
-                    <div className="header-sing d-none d-md-inline-block">
-                      <a href="contact.html">
-                        {" "}
-                        <i className="far fa-user-circle" />
-                        SignIn{" "}
-                      </a>
+                    <div className="header-sing d-none d-md-inline-block"></div>
+                    <div>
+                      {" "}
+                      <Link to="/Signin">Sign In</Link>
                     </div>
+
                     <div className="hamburger-menu menu-bar info-bar">
                       <a href="#">
                         <img src="homeassets/img/icon/bar.png" alt />
@@ -443,6 +443,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+
           {/* course-cat-area-end */}
         </main>
         {/* JS here */}
@@ -466,6 +467,7 @@ export default function Home() {
         <script src="homeassets/js/jquery.easypiechart.js"></script>
         <script src="homeassets/js/main.js"></script>
       </div>
+      <AboutUs />
     </div>
   );
 }

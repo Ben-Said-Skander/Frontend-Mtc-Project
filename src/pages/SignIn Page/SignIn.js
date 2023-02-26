@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import "./style.module.css";
-
+import { Link } from "react-router-dom";
 export default function SignIn() {
   const navigate = useNavigate();
   const [Email, setEmail] = useState("");
@@ -46,10 +46,9 @@ export default function SignIn() {
                       New member ?{" "}
                       <button
                         type="button"
-                        onClick={() => navigate("/SignUp")}
                         className="btn btn-principale btn-login text-uppercase fw-bold"
                       >
-                        SignUp
+                        <Link to="/Signup">Sign Up</Link>
                       </button>
                     </h6>
                   </center>

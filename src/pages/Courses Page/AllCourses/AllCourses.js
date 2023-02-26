@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Search from "../Search Component/Search";
 import Profs from "../../Instructors Page/Instructor List/InstructorList";
 import { Link } from "react-router-dom";
+import "./AllCourses.css";
 export default function AllCourses() {
   const [profs, setProfs] = useState([
     {
