@@ -1,143 +1,197 @@
-body {
-    background: #d2d4da;
-
-}
-label {
-    padding: 1rem 1rem;
-}
-.btn-login {
-    font-size: 0.9rem;
-    letter-spacing: 0.05rem;
-    padding: 0.75rem 1rem;
-
+.h1Sign {
+  font-weight: bold;
+  margin: 0;
 }
 
-.btn-google {
-    color: white !important;
-    background-color: #ea4335;
+h2 {
+  text-align: center;
+}
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+.spanSign {
+  font-size: 12px;
 }
 
-.btn-facebook {
-    color: white !important;
-    background-color: #506288;
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
 }
-/*Code brahim */
-/*
-import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import "./style.module.css";
+.buttonSign {
+  border-radius: 20px;
+  border: 1px solid #FF4B2B;
+  background-color: #FF4B2B;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 14px 45px;  
+  margin-top: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+.buttonSign:active {
+  transform: scale(0.95);
+}
 
-export default function SignUp() {
-  const params = useParams();
-  const navigate = useNavigate();
-  const [FirsName, setFirstName] = useState("");
-  const [LastName, setLastName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
-  const handleClick = () => {
-    let data = { FirsName, LastName, Email, Password };
-    let userId = JSON.parse(localStorage.getItem("userId") || "1");
-    data.id = userId;
-    let user = JSON.parse(localStorage.getItem("user") || "[]");
-    user.push(data);
-    console.log(user);
-    localStorage.setItem("user", JSON.stringify(user));
-    localStorage.setItem("userId", JSON.stringify(userId + 1));
-  };
-  return (
-    <div>
+.buttonSign:focus {
+  outline: none;
+}
+.buttonGhost {
+  border-radius: 20px;
+  border: 1px solid #FF4B2B;
+  background-color: #FF4B2B;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  background-color: transparent;
+  border-color: #FFFFFF;
+}
 
-      <body>
-
-        <div class="mw-100">
-          <div className="row">
-            <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
-              <div className="card border-0 shadow rounded-3 my-5">
-                <div className="card-body p-4 p-sm-5">
-
-                  <center><h6>Already Member ?    <button type="button" onClick={() => navigate("/SignIn")} className="btn btn-facebook btn-login text-uppercase fw-bold">sign In</button></h6></center>
-                  <p className="card-title text-center mb-5 fw-light fs-5">Sign up</p>
-
-                  <form>
-                    <div className="form-floating mb-3">
-
-                      <label
-                        htmlFor="floatingInput"
-                      >
-                        First Name
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        value={FirsName}
-                        placeholder="FirstName"
-                        onChange={(e) => setFirstName(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-floating mb-3">
-
-                      <label
-                        htmlFor="floatingInput"
-                      >
-                        Last Name
-                      </label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        value={LastName}
-                        placeholder="LastName"
-                        onChange={(e) => setLastName(e.target.value)}
-                      />
-
-                    </div>
-                    <div className="form-floating mb-3">
+.form1 {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 150px;
+  height: 100%;
+  text-align: center;
 
 
+}
 
-                      <input type="date" className="form-control" />
+.inputSign {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
 
-                    </div>
-                    <div className="form-floating mb-3">
-                      <label htmlFor="floatingInput">Email address</label>
-                      <input type="Email" className="form-control" value={Email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+.containerr {
+  background-color: #fff;
+  border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+      0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 1500px;
+  max-width: 100%;
+  min-height: 660px;
+}
 
-                    </div>
-                    <div className="form-floating mb-3">
+.signInContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
 
-                      <label htmlFor="floatingPassword">Password</label>
-                      <input type="Password" className="form-control" id="floatingPassword" value={Password} placeholder="Passwrd" onChange={(e) => setPassword(e.target.value)} />
+.containerr.right-panel-active .signInContainer {
+  transform: translateX(100%);
+}
 
-                    </div>
-                    <div className="form-check d-flex justify-content-center mb-5">
-                      <input
-                        className="form-check-input me-2"
-                        type="checkbox"
-                        defaultValue
-                        id="form2Example3c"
-                      />
-                      <label
-                        className="form-check-label"
-                        htmlFor="form2Example3"
-                      >
-                        I agree all statements in{" "}
-                        <a href="#!">Terms of service</a>
-                      </label>
-                    </div>
+.signUpContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 2;
+  right:0;
+}
+@keyframes show {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
 
-                    <div className="d-grid">
+.overlayContainer {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
 
-                      <button className="btn btn-primary btn-login text-uppercase fw-bold" type="submit" onClick={handleClick} >Register</button>
+.containerr.right-panel-active .overlayContainer{
+  transform: translateX(-100%);
+}
 
-                    </div>
-                    <hr className="my-4" />
-
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </body>
-    </div>
-  );
-}*/
+.overlay {
+  background: #FF416C;
+  background: -webkit-linear-gradient(to right, #ffb82a, #e3200b);
+  background: linear-gradient(to top left, #ff9900, #b71b0a);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #FFFFFF;
+  position: relative;
+  height: 100%;
+  width: 200%;
+    transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+.overlayPanel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+.overlayLeft {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
+.containerr.right-panel-active .overlayLeft {
+  transform: translateX(0);
+}
+.socialContainerrr {
+  margin: 20px 0;
+}
+.social {
+  border: 1px solid #DDDDDD;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
