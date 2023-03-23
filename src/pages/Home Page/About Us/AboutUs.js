@@ -1,22 +1,22 @@
 import React from "react";
 import Footer from "./Footer";
-import Styles from "./Styles.module.css";
+import styles from "./styles.module.css";
 const AboutUs = () => {
   return (
     <div>
-      <div class={Styles.about_container}>
-        <div class={Styles.image_container}>
+      <div class={styles.about_container}>
+        <div class={styles.image_container}>
           <img
             src="https://images01.nicepage.com/c461c07a441a5d220e8feb1a/571d82c5059e5cd299902068/vbvf-min.jpg"
             alt=""
           />
         </div>
 
-        <div class={Styles.text_container}>
-          <h1 className={Styles.h1}>Qui sommes nous</h1>
-          <p className={Styles.p}>
+        <div class={styles.text_container}>
+          <h1 className={styles.h1}>Qui sommes nous</h1>
+          <p className={styles.p}>
             {" "}
-            <h4 className={Styles.h4}>
+            <h4 className={styles.h4}>
               {" "}
               est un site éducatif multidisciplinaire, l'endroit où vous pouvez
               découvrir et apprendre à propos de toutes ce qui vous intéressent.

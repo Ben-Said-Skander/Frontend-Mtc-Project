@@ -1,122 +1,105 @@
 import React from "react";
-import Styles from "./myStyles.module.css";
+import styles from "./styles.module.css";
 const Sidebar = () => {
-  const [isLoaded, setLoaded] = React.useState(false);
+  const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
-  React.useEffect(() => {
-    const baliseScript = document.createElement("script");
-    baliseScript.src = "./JSSidebar.js";
-    baliseScript.addEventListener("load", () => setLoaded(true));
-    document.body.appendChild(baliseScript);
-  }, []);
-
-  React.useEffect(() => {
-    if (isLoaded) {
-      // ...
-    }
-  }, [isLoaded]);
-
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   return (
     <div>
-      <nav className={Styles.sidebar_c + " " + Styles.close}>
+      <nav className={`${styles.sidebar_c} ${sidebarOpen ? "" : styles.close}`}>
         <header>
-          <div className={Styles.image_text}>
-            <span className={Styles.image}>
-              <img className={Styles.img} src="assets/images/logo.png" alt="" />
+          <div className={styles.image_text}>
+            <span className={styles.image}>
+              <img className={styles.img} src="./logo-social.png" alt="" />
             </span>
           </div>
 
           <i
-            className={
-              Styles.toggle +
-              " " +
-              Styles.i +
-              " " +
-              "fa fa-angle-double-left" +
-              " " +
-              "toggle"
-            }
+            className={`${styles.toggle} ${styles.i} fa fa-angle-double-left toggle`}
+            onClick={toggleSidebar}
           ></i>
         </header>
 
-        <div className={Styles.menu_bar}>
-          <div className={Styles.menu}>
-            <li className={Styles.search_box}>
+        <div className={styles.menu_bar}>
+          <div className={styles.menu}>
+            <li className={styles.search_box}>
               <i
-                className={Styles.i + " " + Styles.icon + " " + "fa fa-search"}
+                className={styles.i + " " + styles.icon + " " + "fa fa-search"}
               ></i>
               <input
-                className={Styles.input}
+                className={styles.input}
                 type="text"
                 placeholder="       search"
               />
             </li>
 
-            <ul className={Styles.menu_links}>
-              <li className={Styles.nav_link}>
-                <a className={Styles.a} href="#">
+            <ul className={styles.menu_links}>
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
                   <i
                     className={
-                      Styles.i + " " + Styles.icon + " " + "fa fa-dashboard"
+                      styles.i + " " + styles.icon + " " + "fa fa-dashboard"
                     }
                   ></i>
-                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
                     Dashboard
                   </span>
                 </a>
               </li>
 
-              <li className={Styles.nav_link}>
-                <a className={Styles.a} href="#">
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
                   <i
                     className={
-                      Styles.i + " " + Styles.icon + " " + "fa fa-clipboard "
+                      styles.i + " " + styles.icon + " " + "fa fa-clipboard "
                     }
                   ></i>
-                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
                     All Courses
                   </span>
                 </a>
               </li>
 
-              <li className={Styles.nav_link}>
-                <a className={Styles.a} href="#">
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
                   <i
                     className={
-                      Styles.i + " " + Styles.icon + " " + "fa fa-calendar "
+                      styles.i + " " + styles.icon + " " + "fa fa-calendar "
                     }
                   ></i>
-                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
                     Schedules
                   </span>
                 </a>
               </li>
 
-              <li className={Styles.nav_link}>
-                <a className={Styles.a} href="#">
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
                   <i
                     className={
-                      Styles.i +
+                      styles.i +
                       " " +
-                      Styles.icon +
+                      styles.icon +
                       " " +
                       "fa fa-graduation-cap "
                     }
                   ></i>
-                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
                     My Class
                   </span>
                 </a>
               </li>
 
-              <li className={Styles.nav_link}>
-                <a className={Styles.a} href="#">
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
                   <i
                     className={
-                      Styles.i + " " + Styles.icon + " " + "fa fa-cogs "
+                      styles.i + " " + styles.icon + " " + "fa fa-cogs "
                     }
                   ></i>
-                  <span className={`${Styles.text} ${Styles.nav_text}`}>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
                     Settings
                   </span>
                 </a>
