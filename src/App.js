@@ -17,9 +17,10 @@ import Interests from "./pages/Settings Pages/Pages/InterestsPage";
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home Page/Home/Home";
+import AboutUs from "./pages/Home Page/About Us/AboutUs";
 import Dashbord from "./pages/Courses Page/Home/Home";
 import AllCourses from "./pages/Courses Page/AllCourses/AllCourses";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Sidebar from "./components/Sidebar/SideBar";
 import Navbar from "./components/Right Sidebar/Sidebar";
 import ChatPage from "./pages/ChatPage/ChatPage";
 import CoursesList from "./pages/Courses Page/CoursesList/CoursesList";
@@ -30,6 +31,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/AddFiles" element={<AddFiles />} />
           <Route path="/ListFiles" element={<ListFiles />} />
 
@@ -48,9 +50,9 @@ function App() {
           <Route path="/Signup" element={<SignUp />} />
           <Route path="/Signin" element={<SignIn />} />
 
-          <Route path="/Settings/Profile" element={<Profile />} />
-          <Route path="/Settings/Password" element={<Password />} />
-          <Route path="/Settings/Interests" element={<Interests />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Password" element={<Password />} />
+          <Route path="/Interests" element={<Interests />} />
         </Routes>
       </Router>
     </div>

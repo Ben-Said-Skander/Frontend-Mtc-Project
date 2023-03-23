@@ -1,22 +1,23 @@
-import React from "react";
-import Nav from "../../components/nav";
-import Profile from "./Pages/Profile";
-import Password from "./Pages/PasswordPage";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Interests from "./Pages/InterestsPage";
+import React from 'react'
+import Nav from './Nav';
+import Profile from './Profile';
+import Password from './Password';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Interests from './Interests';
 const SettingPage = () => {
   return (
     <div>
-      <BrowserRouter>
+       < BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="/Settings/Profile" element={<Profile />} />
-          <Route path="/Settings/Proassword" element={<Password />} />
-          <Route path="/Settings/Interests" element={<Interests />} />
-        </Routes>
+          <Route path="/" element={<Profile />} />
+          <Route path="password" element={<Password/>} />
+          <Route path="interests" element={<Interests/>} />
+          </Routes>
       </BrowserRouter>
-    </div>
-  );
-};
 
-export default SettingPage;
+    </div>
+  )
+}
+
+export default SettingPage
