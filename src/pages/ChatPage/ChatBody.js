@@ -1,6 +1,6 @@
 import React from 'react'
 import {useNavigate} from "react-router-dom"
-
+import style from "./styles.module.css";
 const ChatBody = ({messages, typingStatus, lastMessageRef}) => { 
   const navigate = useNavigate()
   
@@ -13,32 +13,32 @@ const ChatBody = ({messages, typingStatus, lastMessageRef}) => {
   
   return (
     <>
-      <header className='chat__mainHeader'>
-          <p>Hangout with Colleagues</p>
-          <button className='leaveChat__btn' onClick={handleLeaveChat}>LEAVE CHAT</button>
+      <header className={style.chat__mainHeader}>
+          <h2>Discusions</h2>
+          <button className={style.leaveChat__btn} onClick={handleLeaveChat}>LEAVE CHAT</button>
         </header>
 
 
-        <div className='message__container'>
+        <div className={style.message__container}>
           {messages.map(message => (
             message.name === localStorage.getItem("userName") ? (
-              <div className="message__chats" key={message.id}>
-            <p className='sender__name'>You</p>
-            <div className='message__sender'>
+              <div className={style.message__chats} key={message.id}>
+            <p className={style.sender__name}>You</p>
+            <div className={style.message__sender}>
                 <p>{message.text}</p>
             </div>
           </div>
             ): (
-              <div className="message__chats" key={message.id}>
+              <div className={style.message__chats} key={message.id}>
             <p>{message.name}</p>
-            <div className='message__recipient'>
+            <div className={style.message__recipient}>
                 <p>{message.text}</p>
             </div>
           </div>
             )
             ))}
 
-          <div className='message__status'>
+          <div className={style.message__status}>
             <p>{typingStatus}</p>
           </div>
           <div ref={lastMessageRef} />   

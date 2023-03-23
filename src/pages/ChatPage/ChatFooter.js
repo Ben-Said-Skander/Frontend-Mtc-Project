@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import style from "./styles.module.css";
 const ChatFooter = ({socket}) => {
     const [message, setMessage] = useState("")
     const handleTyping = () => socket.emit("typing",`${localStorage.getItem("userName")} is typing`)
@@ -19,8 +19,8 @@ const ChatFooter = ({socket}) => {
         setMessage("")
     }
   return (
-    <div className='chat__footer'>
-        <form className='form' onSubmit={handleSendMessage}>
+    <div className={style.chat__footer}>
+        <form className={style.form} onSubmit={handleSendMessage}>
           <input 
             type="text" 
             placeholder='Write message' 
@@ -29,7 +29,7 @@ const ChatFooter = ({socket}) => {
             onChange={e => setMessage(e.target.value)}
             onKeyDown={handleTyping}
             />
-            <button className="sendBtn">SEND</button>
+            <button className={style.sendBtn}>SEND</button>
         </form>
      </div>
   )
