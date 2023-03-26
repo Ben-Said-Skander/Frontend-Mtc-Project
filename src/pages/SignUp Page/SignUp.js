@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import "./style.module.css";
+import style from "./style.module.css";
+import { FaFacebookF, FaGooglePlusG, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 export default function SignUp() {
   const params = useParams();
   const navigate = useNavigate();
-  const [FirsName, setFirstName] = useState("");
-  const [LastName, setLastName] = useState("");
+  const [Name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const handleClick = () => {
-    let data = { FirsName, LastName, Email, Password };
+    let data = { Name, Email, Password };
     let userId = JSON.parse(localStorage.getItem("userId") || "1");
     data.id = userId;
     let user = JSON.parse(localStorage.getItem("user") || "[]");
@@ -20,139 +20,41 @@ export default function SignUp() {
     localStorage.setItem("userId", JSON.stringify(userId + 1));
   };
   return (
-    <div>
-      <body>
-        <div class="mw-100">
-          <div className="row">
-            <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
-              <div className="card border-0 shadow rounded-3 my-5">
-                <div className="card-body p-4 p-sm-5">
-                  <center>
-                    <h6>
-                      Already Member ?{" "}
-                      <button
-                        type="button"
-                        onClick={() => navigate("/SignIn")}
-                        className="btn btn-facebook btn-login text-uppercase fw-bold"
-                      >
-                        sign In
-                      </button>
-                    </h6>
-                  </center>
-                  <p className="card-title text-center mb-5 fw-light fs-5">
-                    Sign up
-                  </p>
 
-                  <form>
-                    <div className="form-floating mb-3">
-                      <label htmlFor="floatingInput">First Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        value={FirsName}
-                        placeholder="FirstName"
-                        onChange={(e) => setFirstName(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-floating mb-3">
-                      <label htmlFor="floatingInput">Last Name</label>
-                      <input
-                        type="text"
-                        className="form-control"
-                        value={LastName}
-                        placeholder="LastName"
-                        onChange={(e) => setLastName(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-floating mb-3">
-                      <input type="date" className="form-control" />
-                    </div>
-                    <div className="form-floating mb-3">
-                      <label htmlFor="floatingInput">Email address</label>
-                      <input
-                        type="Email"
-                        className="form-control"
-                        value={Email}
-                        placeholder="Email"
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-floating mb-3">
-                      <label htmlFor="floatingPassword">Password</label>
-                      <input
-                        type="Password"
-                        className="form-control"
-                        id="floatingPassword"
-                        value={Password}
-                        placeholder="Passwrd"
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-check d-flex justify-content-center mb-5">
-                      <input
-                        className="form-check-input me-2"
-                        type="checkbox"
-                        defaultValue
-                        id="form2Example3c"
-                      />
-                      <label
-                        className="form-check-label"
-                        htmlFor="form2Example3"
-                      >
-                        I agree all statements in{" "}
-                        <a href="#!">Terms of service</a>
-                      </label>
-                    </div>
-
-                    <div className="d-grid">
-                      <button
-                        className="btn btn-primary btn-login text-uppercase fw-bold"
-                        type="submit"
-                      >
-                        <Link to="/Signin">Register</Link>
-                      </button>
-                    </div>
-                    <hr className="my-4" />
-                  </form>
-                </div>
-              </div>
+    <div className={style.sss} >
+      <div className={style.containerr} id="container">
+        <div className={style.signUpContainer}>
+          <form className={style.form1} action="#">
+            <h1 className={style.h1Sign}>Créer un compte</h1>
+            <div className={style.socialContainerrr}>
+              <a href="#" className={style.social}><FaFacebookF /></a>
+              <a href="#" className={style.social}><FaGooglePlusG /></a>
+              <a href="#" className={style.social}><FaLinkedinIn /></a>
+            </div>
+            <span className={style.spanSign}>ou utilisez votre email pour vous inscrire</span>
+            <input className={style.inputSign} type="text" placeholder="nom" onChange={(e) => setName(e.target.value)}
+            />
+            <input className={style.inputSign} type="email" placeholder="e-mail" onChange={(e) => setEmail(e.target.value)}
+            />
+            <input className={style.inputSign} type="password" placeholder="mot de passe" onChange={(e) => setPassword(e.target.value)}
+            />
+            <button className={style.buttonSign}onClick={handleClick}><Link to="/SignIn">enregistrer</Link>
+            </button>
+          </form>
+        </div>
+        <div className={style.overlayContainer}>
+          <div className={style.overlay}>
+            <div className={style.overlayLeft}>
+              <form action='/SignIn'>
+                <h1 className={style.h1Sign}>Content de te revoir!</h1>
+                <p>Pour rester en contact avec nous, veuillez vous connecter avec vos informations personnelles</p>
+                <button className={style.buttonGhost} id="signIn" onClick={() => navigate("/SignIn")}
+                >s'identifier</button>
+              </form>
             </div>
           </div>
         </div>
-      </body>
+      </div>
     </div>
-  );
+    )
 }
-/*import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-
-const HomeChat = ({ socket }) => {
-  const navigate = useNavigate();
-  const [userName, setUserName] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    localStorage.setItem("userName", userName);
-    socket.emit("newUser", { userName, socketID: socket.id });
-    navigate("/chat");
-  };
-  return (
-    <form className="home__container" onSubmit={handleSubmit}>
-      <h2 className="home__header">Sign in to Open Chat</h2>
-      <label htmlFor="username">Username</label>
-      <input
-        type="text"
-        minLength={6}
-        name="username"
-        id="username"
-        className="username__input"
-        value={userName}
-        onChange={(e) => setUserName(e.target.value)}
-      />
-      <button className="home__cta">SIGN IN</button>
-    </form>
-  );
-};
-
-export default HomeChat;
-*/

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Sidebar from "../../components/Sidebar/SideBar";
-import style from"./styles.module.css";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import style from "./styles.module.css";
 //This component displays the list of imported files
 export default function ListFiles() {
   const [files, setFiles] = useState([]);
@@ -44,7 +44,10 @@ export default function ListFiles() {
           .map((value, key) => (
             <ul className={style.valListe} key={key}>
               <li className={style.liFile}>
-                <img className={style.imgFile} src="../homeassets/img/fileImage/pdf.png" />
+                <img
+                  className={style.imgFile}
+                  src="../homeassets/img/fileImage/pdf.png"
+                />
                 <div>
                   <p>{value.fileName}</p>
                   <p>{value.dateFile}</p>

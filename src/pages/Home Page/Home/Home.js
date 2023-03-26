@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AboutUs from "../About Us/AboutUs";
+import Footer from "../About Us/Footer";
 export default function Home() {
   return (
     <div>
@@ -56,7 +57,7 @@ export default function Home() {
                         </li>
                         <li>
                           <a href="#">
-                             Cours <i className="far fa-angle-down" />
+                            Cours <i className="far fa-angle-down" />
                           </a>
                         </li>
                         <li>
@@ -64,7 +65,7 @@ export default function Home() {
                             Instructeurs <i className="far fa-angle-down" />
                           </a>
                         </li>
-                        
+
                         <li>
                           <a href="contact.html">Contact</a>
                         </li>
@@ -74,16 +75,12 @@ export default function Home() {
                 </div>
                 <div className="col-xl-3 col-lg-5 col-md-6 col-4">
                   <div className="header-right d-sm-flex align-items-center justify-content-end">
-                    <div className="header-icon d-none d-md-inline-block">
-                      
-                    </div>
+                    <div className="header-icon d-none d-md-inline-block"></div>
                     <div className="header-sing d-none d-md-inline-block"></div>
                     <div>
                       {" "}
                       <Link to="/Signin">Sign In</Link>
                     </div>
-
-                    
                   </div>
                 </div>
               </div>
@@ -91,7 +88,7 @@ export default function Home() {
           </div>
         </header>
         {/* header-start */}
-       
+
         <main>
           {/* hero-area start */}
           <section className="hero-area pos-rel">
@@ -123,7 +120,6 @@ export default function Home() {
                           >
                             C'est l'apprentissage qui vient à vous
                           </h2>
-                          
                         </div>
                       </div>
                     </div>
@@ -133,7 +129,7 @@ export default function Home() {
             </div>
           </section>
           {/* hero-area end */}
-         
+
           {/* course-cat-area-start */}
           <div className="course-cat-area pb-100">
             <div className="container">
@@ -160,7 +156,10 @@ export default function Home() {
                       <h4>
                         <a href="courses-details.html">Graphics Design (UI)</a>
                       </h4>
-                      <span> Apprenez les principes de la conception Graphique </span>
+                      <span>
+                        {" "}
+                        Apprenez les principes de la conception Graphique{" "}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -175,7 +174,10 @@ export default function Home() {
                       <h4>
                         <a href="courses-details.html">Business </a>
                       </h4>
-                      <span>Un cours complet comprenant les fondamentaux des affaires, le leadership, le marketing</span>
+                      <span>
+                        Un cours complet comprenant les fondamentaux des
+                        affaires, le leadership, le marketing
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -288,45 +290,44 @@ export default function Home() {
           </div>
 
           {/* course-cat-area-end */}
-         {/* brand-area-start */}
-<div className="brand-area theme-bg pb-65 pt-65">
-  <div className="container">
-    <div className="row brand-active">
-      <div className="col-xl-2 text-center">
-        <div className="single-brand text-center">
-          <img src="homeassets/img/brand/01.png" alt />
-        </div>
-      </div>
-      <div className="col-xl-2 text-center">
-        <div className="single-brand">
-          <img src="homeassets/img/brand/02.png" alt />
-        </div>
-      </div>
-      <div className="col-xl-2 text-center">
-        <div className="single-brand">
-          <img src="homeassets/img/brand/03.png" alt />
-        </div>
-      </div>
-      <div className="col-xl-2 text-center">
-        <div className="single-brand">
-          <img src="homeassets/img/brand/04.png" alt />
-        </div>
-      </div>
-      <div className="col-xl-2 text-center">
-        <div className="single-brand">
-          <img src="homeassets/img/brand/05.png" alt />
-        </div>
-      </div>
-      <div className="col-xl-2 text-center">
-        <div className="single-brand">
-          <img src="homeassets/img/brand/01.png" alt />
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{/* brand-area-end */}
-
+          {/* brand-area-start */}
+          <div className="brand-area theme-bg pb-65 pt-65">
+            <div className="container">
+              <div className="row brand-active">
+                <div className="col-xl-2 text-center">
+                  <div className="single-brand text-center">
+                    <img src="homeassets/img/brand/01.png" alt />
+                  </div>
+                </div>
+                <div className="col-xl-2 text-center">
+                  <div className="single-brand">
+                    <img src="homeassets/img/brand/02.png" alt />
+                  </div>
+                </div>
+                <div className="col-xl-2 text-center">
+                  <div className="single-brand">
+                    <img src="homeassets/img/brand/03.png" alt />
+                  </div>
+                </div>
+                <div className="col-xl-2 text-center">
+                  <div className="single-brand">
+                    <img src="homeassets/img/brand/04.png" alt />
+                  </div>
+                </div>
+                <div className="col-xl-2 text-center">
+                  <div className="single-brand">
+                    <img src="homeassets/img/brand/05.png" alt />
+                  </div>
+                </div>
+                <div className="col-xl-2 text-center">
+                  <div className="single-brand">
+                    <img src="homeassets/img/brand/01.png" alt />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* brand-area-end */}
         </main>
         {/* JS here */}
         <script src="homeassets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -350,6 +351,7 @@ export default function Home() {
         <script src="homeassets/js/main.js"></script>
       </div>
       <AboutUs />
+      <Footer />
     </div>
   );
 }

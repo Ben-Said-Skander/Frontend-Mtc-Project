@@ -148,6 +148,9 @@ body {
   font-weight: 500;
   transition: var(--tran-05);
 }
+.sidebar_c ul{
+  padding-left:0;
+}
 .sidebar_c li a {
   list-style: none;
   height: 100%;

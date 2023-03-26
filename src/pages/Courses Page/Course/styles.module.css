@@ -12,12 +12,12 @@
   border-radius: 8px;
   width: 90%;
 }
-.course-delete {
+.course.delete {
   float: right;
   width: 20px;
 }
 
-.delete-icon {
+.delete.icon {
   cursor: pointer;
   color: darkmagenta;
   font-size: large;

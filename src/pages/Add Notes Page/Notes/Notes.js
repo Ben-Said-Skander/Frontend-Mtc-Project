@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import Note from "./Note";
-
+import Sidebar from "../../../components/Sidebar/Sidebar";
 export default function Notes() {
   const [notes, setNotes] = useState([]);
   const [title, setTitle] = useState("");
@@ -36,22 +36,25 @@ export default function Notes() {
   }, []);
 
   return (
-    <div className={styles.note_container}>
-      <h1 className={styles.head}>Note and Reminders</h1>
+    <div>
+      <Sidebar />
+      <div className={styles.note_container}>
+        <h1 className={styles.head}>Note and Reminders</h1>
 
-      <div className={styles.notes_list}>
-        {notes.map((u, key) => {
-          return <Note value={u} />;
-        })}
-      </div>
-      <h2 className={styles.title}>{title}</h2>
-      <div className={styles.center}>
-        <Link to="/AddNotes">
-          <button type="button" className={styles.blue_btn}>
-            Add Note
-          </button>
-        </Link>
-      </div>
+        <div className={styles.notes_list}>
+          {notes.map((u, key) => {
+            return <Note value={u} />;
+          })}
+        </div>
+        <h2 className={styles.title}>{title}</h2>
+        <div className={styles.center}>
+          <Link to="/AddNotes">
+            <button type="button" className={styles.blue_btn}>
+              Add Note
+            </button>
+          </Link>
+        </div>
+      </div>{" "}
     </div>
   );
 }

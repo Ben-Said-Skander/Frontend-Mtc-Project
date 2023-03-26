@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
-
+import Sidebar from "../../../components/Sidebar/Sidebar";
 export default function AddNotes() {
   const [noteText, setNoteText] = useState("");
   const handClick = () => {
@@ -22,27 +22,34 @@ export default function AddNotes() {
   };
 
   return (
-    <div className={styles.note_container}>
-      <h1 className={styles.head}>
-        <Link to="/Notes">
-          <div className={styles.arrow} />{" "}
-        </Link>
-        Note and Reminders
-      </h1>
-      <br />
-      <br />
-      <br />
-      <div>
-        <textarea value={noteText} onChange={changeNote}></textarea>
-      </div>
-      <br />
-      <div className={styles.center}>
-        <Link to="/Notes">
-          <button type="button" className={styles.blue_btn} onClick={handClick}>
-            Confirm
-          </button>
-        </Link>
-      </div>
+    <div>
+      <Sidebar />
+      <div className={styles.note_container}>
+        <h1 className={styles.head}>
+          <Link to="/Notes">
+            <div className={styles.arrow} />{" "}
+          </Link>
+          Note and Reminders
+        </h1>
+        <br />
+        <br />
+        <br />
+        <div>
+          <textarea value={noteText} onChange={changeNote}></textarea>
+        </div>
+        <br />
+        <div className={styles.center}>
+          <Link to="/Notes">
+            <button
+              type="button"
+              className={styles.blue_btn}
+              onClick={handClick}
+            >
+              Confirm
+            </button>
+          </Link>
+        </div>
+      </div>{" "}
     </div>
   );
 }

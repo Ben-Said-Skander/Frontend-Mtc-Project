@@ -1,3 +1,4 @@
+import style from "./styles.module.css";
 import { useState } from "react";
 
 const AddCourse = ({ handleAddCourse }) => {
@@ -18,7 +19,7 @@ const AddCourse = ({ handleAddCourse }) => {
   };
 
   return (
-    <div className="course.new">
+    <div className={style.course.new}>
       <textarea
         rows="8"
         cols="10"
@@ -26,8 +27,8 @@ const AddCourse = ({ handleAddCourse }) => {
         value={courseName}
         onChange={handleChange}
       ></textarea>
-      <div className="course-footer">
-        <button className="save" onClick={handleSaveClick}>
+      <div className={style.course}>
+        <button className={style.save} onClick={handleSaveClick}>
           Save
         </button>
       </div>

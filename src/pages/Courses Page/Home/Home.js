@@ -3,9 +3,9 @@ import { nanoid } from "nanoid";
 import CoursesList from "../CoursesList/CoursesList";
 import Header from "../Header/Header";
 import Search from "../Search Component/Search";
-import "./Home.css";
 import { Link } from "react-router-dom";
-
+import style from "./styles.module.css";
+import Sidebar from "../../../components/Sidebar/Sidebar";
 const Dashbord = () => {
   const [courses, setCourses] = useState([
     {
@@ -59,36 +59,39 @@ const Dashbord = () => {
   };
 
   return (
-    <div className={`${darkMode && "dark-mode"}`}>
-      <div className="container">
-        <Header handleToggleDarkMode={setDarkMode} />
-        <br></br>
-        <Search handleSearchCourse={setSearchName} />
+    <div>
+      <Sidebar />
+      <div className={`${style.darkMode && "dark-mode"}`}>
+        <div className={style.container}>
+          <Header handleToggleDarkMode={setDarkMode} />
+          <br></br>
+          <Search handleSearchCourse={setSearchName} />
 
-        <CoursesList
-          courses={courses.filter((course) =>
-            course.name.toLowerCase().includes(searchName)
-          )}
-          handleAddCourse={addCourse}
-          handleDeleteCourse={deleteCourse}
-        />
+          <CoursesList
+            courses={courses.filter((course) =>
+              course.name.toLowerCase().includes(searchName)
+            )}
+            handleAddCourse={addCourse}
+            handleDeleteCourse={deleteCourse}
+          />
 
-        <h1 className="all">All Courses</h1>
-        <Link to="/AllCourses">
-          <button className="btn">See All Courses</button>
-        </Link>
+          <h1 className={style.all}>All Courses</h1>
+          <Link to="/AllCourses">
+            <button className={style.btn}>See All Courses</button>
+          </Link>
 
-        <br></br>
-        <br></br>
+          <br></br>
+          <br></br>
 
-        <CoursesList
-          courses={courses.filter((course) =>
-            course.name.toLowerCase().includes(searchName)
-          )}
-          handleAddCourse={addCourse}
-          handleDeleteCourse={deleteCourse}
-        />
-      </div>
+          <CoursesList
+            courses={courses.filter((course) =>
+              course.name.toLowerCase().includes(searchName)
+            )}
+            handleAddCourse={addCourse}
+            handleDeleteCourse={deleteCourse}
+          />
+        </div>
+      </div>{" "}
     </div>
   );
 };

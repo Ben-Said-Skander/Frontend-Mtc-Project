@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Search from "../Search Component/Search";
 import Profs from "../../Instructors Page/Instructor List/InstructorList";
 import { Link } from "react-router-dom";
+import style from "./styles.module.css";
 export default function CoursProfs() {
   const [profs, setProfs] = useState([
     {
@@ -49,8 +50,8 @@ export default function CoursProfs() {
   }, [profs]);
 
   return (
-    <div className={`${darkMode && "dark-mode"}`}>
-      <div className="container">
+    <div className={`${style.darkMode && style.dark - mode}`}>
+      <div className={style.container}>
         <Header handleToggleDarkMode={setDarkMode} />
         <br></br>
         <Search handleSearchCourse={setSearchName} />
@@ -65,7 +66,7 @@ export default function CoursProfs() {
         <br></br>
 
         <Link to="../">
-          <button className="btn">Previous</button>
+          <button className={style.btn}>Previous</button>
         </Link>
       </div>
     </div>

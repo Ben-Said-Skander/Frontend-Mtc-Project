@@ -4,7 +4,8 @@ import Header from "../Header/Header";
 import Search from "../Search Component/Search";
 import Profs from "../../Instructors Page/Instructor List/InstructorList";
 import { Link } from "react-router-dom";
-import "./AllCourses.css";
+import style from "./styles.module.css";
+import Sidebar from "../../../components/Sidebar/Sidebar";
 export default function AllCourses() {
   const [profs, setProfs] = useState([
     {
@@ -50,36 +51,39 @@ export default function AllCourses() {
   }, [profs]);
 
   return (
-    <div className={`${darkMode && "dark-mode"}`}>
-      <div className="container">
-        <Header handleToggleDarkMode={setDarkMode} />
-        <br></br>
-        <Search handleSearchCourse={setSearchName} />
-        <h1 className="see">All Courses</h1>
+    <div>
+      <Sidebar />
+      <div className={`${style.darkMode && "dark-mode"}`}>
+        <div className={style.container}>
+          <Header handleToggleDarkMode={setDarkMode} />
+          <br></br>
+          <Search handleSearchCourse={setSearchName} />
+          <h1 className={style.see}>All Courses</h1>
 
-        <h2 className="cours">Math</h2>
-        <Profs
-          profs={profs.filter((prof) =>
-            prof.name.toLowerCase().includes(searchName)
-          )}
-        />
-        <h2 className="cours">Phy</h2>
-        <Profs
-          profs={profs.filter((prof) =>
-            prof.name.toLowerCase().includes(searchName)
-          )}
-        />
-        <h2 className="cours">Gym</h2>
-        <Profs
-          profs={profs.filter((prof) =>
-            prof.name.toLowerCase().includes(searchName)
-          )}
-        />
-        <br></br>
-        <Link to="../">
-          <button className="btn">Previous</button>
-        </Link>
-      </div>
+          <h2 className={style.cours}>Math</h2>
+          <Profs
+            profs={profs.filter((prof) =>
+              prof.name.toLowerCase().includes(searchName)
+            )}
+          />
+          <h2 className={style.cours}>Phy</h2>
+          <Profs
+            profs={profs.filter((prof) =>
+              prof.name.toLowerCase().includes(searchName)
+            )}
+          />
+          <h2 className={style.cours}>Gym</h2>
+          <Profs
+            profs={profs.filter((prof) =>
+              prof.name.toLowerCase().includes(searchName)
+            )}
+          />
+          <br></br>
+          <Link to="../">
+            <button className={style.btn}>Previous</button>
+          </Link>
+        </div>
+      </div>{" "}
     </div>
   );
 }

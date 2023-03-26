@@ -1,9 +1,10 @@
 import Course from "../Course/Course";
 import AddCourse from "../AddCourse/AddCourse";
-import "./CoursesList.css";
+
+import style from "./styles.module.css";
 const CoursesList = ({ courses, handleAddCourse, handleDeleteCourse }) => {
   return (
-    <div className="courses-list">
+    <div className={style.courses}>
       {courses.map((course) => (
         <Course
           id={course.id}
