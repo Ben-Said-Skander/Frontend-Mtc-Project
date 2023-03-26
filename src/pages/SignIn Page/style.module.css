@@ -1,81 +1,240 @@
-body {
-    background: #fff;
-    background: linear gradient (135 degrees, #71b7e6, #9b59b6);
-  }
-  
-  .btn-login {
-    font-size: 0.9rem;
-    letter-spacing: 0.05rem;
-    padding: 0.75rem 1rem;
-  }
-  
-  .btn-google {
-    color: white !important;
-    background-color: #ea4335;
-  }
-  
-  .btn-facebook {
-    color: white !important;
-    background-color: #3b5998;
-  }
-  .btn-titre {
-    color: white !important;
-    background-color: #2d63fc;
-  }
-  .tab- content .enter button 
-{
-  height: 100%;
-  width: 40%;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+.h1Sign {
+  font-weight: bold;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+}
+p {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
+}
+
+.spanSign {
+  font-size: 12px;
+}
+
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.buttonSign {
+  border-radius: 20px;
+  border: 1px solid #ea3313;
+  background-color: #ea3313;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+  padding: 14px 45px;
   letter-spacing: 1px;
-  cursor: pointer;
-  transition: every 0.3 s ease;
-  background: linear gradient (135 degrees, #71b7e6, #9b59b6);
-  justify-content: space between;
-  margin: 15px;
-  position: static;}
-  /*Code Brahim*/
-  /*
-  body {
-    background: #d2d4da;
-  }
-  
-  .btn-login {
-    font-size: 0.9rem;
-    letter-spacing: 0.05rem;
-    padding: 0.75rem 1rem;
-  }
-  
-  .btn-google {
-    color: white !important;
-    background-color: #ea4335;
-  }
-  
-  .btn-facebook {
-    color: white !important;
-    background-color: #3b5998;
-  }
-  .btn-titre {
-    color: white !important;
-    background-color: #2d63fc;
-  }
-  .tab- content .enter button 
-{
-  height: 100%;
-  width: 40%;
-  border-radius: 5px;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.buttonSign:active {
+  transform: scale(0.95);
+}
+
+.buttonSign:focus {
+  outline: none;
+}
+
+.buttonGhost {
+  border-radius: 20px;
+  border: 1px solid #FF4B2B;
+  background-color: #FF4B2B;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
   letter-spacing: 1px;
-  cursor: pointer;
-  transition: every 0.3 s ease;
-  background: linear gradient (135 degrees, #71b7e6, #9b59b6);
-  justify-content: space between;
-  margin: 15px;
-  position: static;}*/
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  background-color: transparent;
+  border-color: #FFFFFF;
+}
+
+.form1 {
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+.inputSign {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+.containerr {
+  background-color: #fff;
+  border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+      0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 1500px;
+  max-width: 100%;
+  min-height: 660px;
+}
+
+.signInContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.containerr.right-panel-active .signInContainer {
+  transform: translateX(100%);
+}
+
+.signUpContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.containerr.right-panel-active .signUpContainer {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+@keyframes show {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.overlayContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.containerr.right-panel-active .overlayContainer{
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background: #FF416C;
+  background: -webkit-linear-gradient(to right, #ffb82a, #e3200b);
+  background: linear-gradient(to bottom right,  #ff9900 ,#b71b0a);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #FFFFFF;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+    transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.containerr.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlayPanel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlayLeft {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+  transform: translateX(-20%);
+}
+
+.containerr.right-panel-active .overlayLeft {
+  transform: translateX(0);
+}
+
+.overlayRight {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  right: 0;
+}
+
+.containerr.right-panel-active .overlayRight {
+  transform: translateX(20%);
+}
+
+.socialContainerr {
+  margin: 20px 0;
+}
+
+.social {
+  border: 1px solid #DDDDDD;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}

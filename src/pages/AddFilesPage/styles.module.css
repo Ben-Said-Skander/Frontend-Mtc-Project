@@ -1,0 +1,118 @@
+.containerr{
+    width: 100%;
+    padding: 3%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .searchBar{
+    width: 50%;
+    max-width: 500px;
+    background: #f0e3ce;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 4px 14px;
+    backdrop-filter: blur(4px) saturate(180%);
+  }
+  .searchBar input{
+    background-color: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 20px 14px ;
+    font-size: 18px;
+    color: #4c4b52;
+  }
+  ::placeholder{
+    color: #4c4b52;
+  }
+  .searchBar button img{
+    width: 25px;
+    background-color: #E14D2A;
+  }
+  .searchBar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #E14D2A;
+    cursor: pointer;
+  }
+  .valListe{
+    text-align: left;
+    padding-bottom: 50px;
+  }
+  .liFile{
+    list-style-type: none;
+    margin: 0.1em 15em;
+    background-color: #FD841F;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 1.2em 1.2em;
+  }
+  .liFile img{
+    background-color: #FD841F;
+    width: 60px;
+    cursor: pointer;
+  }
+  .liFile div{    
+    background-color: #FD841F;
+    flex: 1;
+  }
+  .liFile div p{    
+    background-color: #FD841F;
+    margin-bottom: 1px;
+  }
+  .boxUpload{
+    background-color: transparent;
+    font-size: 16px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10 px black;
+    width: 350px;
+    outline: none;
+  }
+  ::-webkit-file-upload-button{
+    color: white;
+    background: #ec6f1b;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+  }
+  .btnUpload{
+    color: white;
+    background: #493487;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    outline: none;
+  }
+  .btnAdd{
+    color: white;
+    background: linear-gradient(to top left, #ff9900, #b71b0a);
+    padding: 13px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 300px;
+  }
+  h3{
+    padding-top: 50px;
+    text-align: left;
+    margin-left: 380px;
+  }
+  ::-webkit-file-upload-button:hover{
+    background: #b1510d;
+  }
+  .btn-File{
+    border-radius: 50px;
+    color: white;
+    background: rgb(10, 10, 68);
+    font-size: 15px;
+    border: none;
+  }
+  
