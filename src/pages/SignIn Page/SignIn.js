@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import "./style.module.css";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import style from "./style.module.css";
+import { Link, useNavigate } from "react-router-dom";
+import { FaFacebookF, FaGooglePlusG, FaLinkedinIn } from "react-icons/fa";
 export default function SignIn() {
+
   const navigate = useNavigate();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
   const [user, setuser] = useState([]);
   const [messagee, setMessage] = useState("");
-
   const handleClick = () => {
     let data = {
       Email: Email,
@@ -34,79 +34,37 @@ export default function SignIn() {
     setMessage(message);
   };
   return (
-    <div>
-      <body class="-tab">
-        <div class="mw-100">
-          <div className="row">
-            <div className="col-sm-9 col-md-7 col-lg-5 mx-auto">
-              <div className="card border-0 shadow rounded-3 my-5">
-                <div className="card-body p-4 p-sm-5">
-                  <center>
-                    <h6>
-                      New member ?{" "}
-                      <button
-                        type="button"
-                        className="btn btn-principale btn-login text-uppercase fw-bold"
-                      >
-                        <Link to="/Signup">Sign Up</Link>
-                      </button>
-                    </h6>
-                  </center>
-                  <p className="card-title text-center mb-5 fw-light fs-5">
-                    Sign In
-                  </p>
-
-                  <form>
-                    <div className="form-floating mb-3">
-                      <label htmlFor="floatingInput">Email address</label>
-                      <input
-                        type="Email"
-                        className="form-control"
-                        placeholder="Email"
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-floating mb-3">
-                      <label htmlFor="floatingPassword">Password</label>
-                      <input
-                        type="Password"
-                        className="form-control"
-                        id="floatingPassword"
-                        placeholder="Passwrd"
-                        onChange={(e) => setPassword(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-check mb-3">
-                      <input
-                        className="form-check-input"
-                        type="checkbox"
-                        defaultValue
-                        id="rememberPasswordCheck"
-                      />
-                      <label
-                        className="form-check-label"
-                        htmlFor="rememberPasswordCheck"
-                      >
-                        Remember password
-                      </label>
-                    </div>
-                    <div className="d-grid">
-                      <button
-                        className="btn btn-primary btn-login text-uppercase fw-bold"
-                        type="submit"
-                        onClick={handleClick}
-                      >
-                        Sign In
-                      </button>
-                    </div>
-                    <hr className="my-4" />
-                  </form>
-                </div>
-              </div>
+    <div className={style.sss} >
+      <div className={style.containerr} id="container">
+        <div className={style.signInContainer}>
+          <form className={style.form1} action="#">
+            <h1 className={style.h1Sign}>s'identifier</h1>
+            <div className={style.socialContainerr}>
+              <a href="#" className={style.social}><FaFacebookF /></a>
+              <a href="#" className={style.social}><FaGooglePlusG /></a>
+              <a href="#" className={style.social}><FaLinkedinIn /></a>
+            </div>
+            <span className={style.spanSign}>ou utilisez votre compte</span>
+            <input className={style.inputSign} type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)}
+            />
+            <input className={style.inputSign} type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}
+            />
+            <a href="#">Mot de passe oublié?</a>
+            <button className={style.buttonSign} onClick={handleClick}>s'identifier</button>
+          </form>
+        </div>
+        <div className={style.overlayContainer}>
+          <div className={style.overlay}>
+            <div className={style.overlayRight}>
+              <form action='/SignUp'>
+                <h1 className={style.h1Sign}>Salut l'ami!</h1>
+                <p>Entrez vos données personnelles et commencez votre voyage avec nous</p>
+                <button className={style.buttonGhost} type='submit' id="signUp" > <Link to="/Signup">Sign Up</Link></button>
+              </form>
             </div>
           </div>
         </div>
-      </body>
+      </div>
     </div>
-  );
+  )
 }

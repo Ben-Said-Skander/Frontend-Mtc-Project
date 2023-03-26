@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-
+import Sidebar from "../../components/Sidebar/SideBar";
+import style from"./styles.module.css";
 //This component displays the list of imported files
 export default function ListFiles() {
   const [files, setFiles] = useState([]);
@@ -12,23 +13,24 @@ export default function ListFiles() {
 
   return (
     <div>
-      <div className="containerr">
-        <form action="#" className="search-bar">
+      <Sidebar />
+      <div className={style.containerr}>
+        <form action="#" className={style.searchBar}>
           <input
             type="text"
             name="query"
             id="query"
-            placeholder="Search"
+            placeholder="Rechercher"
             onChange={(event) => {
               setSearchFile(event.target.value);
             }}
           />
           <button type="button">
-            <img src="../assets/images/search.png" />
+            <img src="../homeassets/img/fileImage/search.png" />
           </button>
         </form>
       </div>
-      <div className="liste">
+      <div className={style.liste}>
         {files
           .filter((val) => {
             if (searchFile == "") {
@@ -40,9 +42,9 @@ export default function ListFiles() {
             }
           })
           .map((value, key) => (
-            <ul className="valListe" key={key}>
-              <li>
-                <img src="../assets/images/pdf.png" />
+            <ul className={style.valListe} key={key}>
+              <li className={style.liFile}>
+                <img className={style.imgFile} src="../homeassets/img/fileImage/pdf.png" />
                 <div>
                   <p>{value.fileName}</p>
                   <p>{value.dateFile}</p>
@@ -51,7 +53,7 @@ export default function ListFiles() {
             </ul>
           ))}
       </div>
-      {files.length === 0 ? <>No Files to display</> : <></>}
+      {files.length === 0 ? <>Aucun fichier à afficher</> : <></>}
     </div>
   );
 }
