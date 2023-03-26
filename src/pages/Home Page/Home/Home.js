@@ -56,24 +56,15 @@ export default function Home() {
                         </li>
                         <li>
                           <a href="#">
-                            Courses <i className="far fa-angle-down" />
+                             Cours <i className="far fa-angle-down" />
                           </a>
                         </li>
                         <li>
                           <a href="#">
-                            Events <i className="far fa-angle-down" />
+                            Instructeurs <i className="far fa-angle-down" />
                           </a>
                         </li>
-                        <li>
-                          <a href="blog.html">
-                            News <i className="far fa-angle-down" />
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            Pages <i className="far fa-angle-down" />
-                          </a>
-                        </li>
+                        
                         <li>
                           <a href="contact.html">Contact</a>
                         </li>
@@ -84,12 +75,7 @@ export default function Home() {
                 <div className="col-xl-3 col-lg-5 col-md-6 col-4">
                   <div className="header-right d-sm-flex align-items-center justify-content-end">
                     <div className="header-icon d-none d-md-inline-block">
-                      <a href="#">
-                        <i className="fab fa-facebook-f" />
-                      </a>
-                      <a href="#">
-                        <i className="fab fa-youtube" />
-                      </a>
+                      
                     </div>
                     <div className="header-sing d-none d-md-inline-block"></div>
                     <div>
@@ -97,11 +83,7 @@ export default function Home() {
                       <Link to="/Signin">Sign In</Link>
                     </div>
 
-                    <div className="hamburger-menu menu-bar info-bar">
-                      <a href="#">
-                        <img src="homeassets/img/icon/bar.png" alt />
-                      </a>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
@@ -109,93 +91,7 @@ export default function Home() {
           </div>
         </header>
         {/* header-start */}
-        {/* slide-bar start */}
-        <aside className="slide-bar">
-          <div className="close-mobile-menu">
-            <a href="javascript:void(0);">
-              <i className="fas fa-times" />
-            </a>
-          </div>
-
-          {/* side-mobile-menu start */}
-          <nav className="side-mobile-menu">
-            <ul id="mobile-menu-active">
-              <li className="has-dropdown">
-                <a href="index.html">Home</a>
-                <ul className="sub-menu">
-                  <li>
-                    <a href="index.html">Home Style 1</a>
-                  </li>
-                  <li>
-                    <a href="index-2.html">Home Style 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="has-dropdown">
-                <a href="#">Courses</a>
-                <ul className="sub-menu">
-                  <li>
-                    <a href="courses.html">Course</a>
-                  </li>
-                  <li>
-                    <a href="courses%20-2.html">Course List</a>
-                  </li>
-                  <li>
-                    <a href="courses-details.html">Course Details</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="has-dropdown">
-                <a href="#">Events</a>
-                <ul className="sub-menu">
-                  <li>
-                    <a href="events.html">Events List</a>
-                  </li>
-                  <li>
-                    <a href="events-details.html">Events Details</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="has-dropdown">
-                <a href="#">Blogs</a>
-                <ul className="sub-menu">
-                  <li>
-                    <a href="blog-grid.html">Blog Grid</a>
-                  </li>
-                  <li>
-                    <a href="blog-side.html">Blog Sidebar</a>
-                  </li>
-                  <li>
-                    <a href="blog-details.html">Blog Details</a>
-                  </li>
-                </ul>
-              </li>
-              <li className="has-dropdown">
-                <a href="#">Pages</a>
-                <ul className="sub-menu">
-                  <li>
-                    <a href="about.html">About</a>
-                  </li>
-                  <li>
-                    <a href="team.html">Team</a>
-                  </li>
-                  <li>
-                    <a href="team-details.html">Team Details</a>
-                  </li>
-                  <li>
-                    <a href="faq.html">Faq</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="contact.html">Contacts</a>
-              </li>
-            </ul>
-          </nav>
-          {/* side-mobile-menu end */}
-        </aside>
-        <div className="body-overlay" />
-        {/* slide-bar end */}
+       
         <main>
           {/* hero-area start */}
           <section className="hero-area pos-rel">
@@ -227,12 +123,7 @@ export default function Home() {
                           >
                             C'est l'apprentissage qui vient à vous
                           </h2>
-                          <form className="slider-search-form">
-                            <input type="text" placeholder="Rechercher" />
-                            <button type="submit">
-                              <i className="far fa-search" />
-                            </button>
-                          </form>
+                          
                         </div>
                       </div>
                     </div>
@@ -242,55 +133,7 @@ export default function Home() {
             </div>
           </section>
           {/* hero-area end */}
-          {/* counter-area-start */}
-          <div className="counter-area pb-100">
-            <div className="container">
-              <div className="counter-bg">
-                <div className="row">
-                  <div className="col-xl-3 col-lg-3 col-md-6">
-                    <div className="counter-wrapper mb-30">
-                      <div className="counter-icon f-left">
-                        <i className="fal fa-users" />
-                      </div>
-                      <div className="counter-text">
-                        <h1>
-                          <span className="counter">50</span>+
-                        </h1>
-                        <span>Inscription</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-6">
-                    <div className="counter-wrapper mb-30">
-                      <div className="counter-icon f-left">
-                        <i className="fal fa-books" />
-                      </div>
-                      <div className="counter-text">
-                        <h1>
-                          <span className="counter">100</span>+
-                        </h1>
-                        <span>Cours valables</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-xl-3 col-lg-3 col-md-6">
-                    <div className="counter-wrapper mb-30">
-                      <div className="counter-icon f-left">
-                        <i className="fal fa-graduation-cap" />
-                      </div>
-                      <div className="counter-text">
-                        <h1>
-                          <span className="counter">150</span>+
-                        </h1>
-                        <span>Instructeurs</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* counter-area-end */}
+         
           {/* course-cat-area-start */}
           <div className="course-cat-area pb-100">
             <div className="container">
@@ -317,7 +160,7 @@ export default function Home() {
                       <h4>
                         <a href="courses-details.html">Graphics Design (UI)</a>
                       </h4>
-                      <span> Cours Web Design </span>
+                      <span> Apprenez les principes de la conception Graphique </span>
                     </div>
                   </div>
                 </div>
@@ -332,7 +175,7 @@ export default function Home() {
                       <h4>
                         <a href="courses-details.html">Business </a>
                       </h4>
-                      <span>Finance Et Comptabilité</span>
+                      <span>Un cours complet comprenant les fondamentaux des affaires, le leadership, le marketing</span>
                     </div>
                   </div>
                 </div>
@@ -445,6 +288,45 @@ export default function Home() {
           </div>
 
           {/* course-cat-area-end */}
+         {/* brand-area-start */}
+<div className="brand-area theme-bg pb-65 pt-65">
+  <div className="container">
+    <div className="row brand-active">
+      <div className="col-xl-2 text-center">
+        <div className="single-brand text-center">
+          <img src="homeassets/img/brand/01.png" alt />
+        </div>
+      </div>
+      <div className="col-xl-2 text-center">
+        <div className="single-brand">
+          <img src="homeassets/img/brand/02.png" alt />
+        </div>
+      </div>
+      <div className="col-xl-2 text-center">
+        <div className="single-brand">
+          <img src="homeassets/img/brand/03.png" alt />
+        </div>
+      </div>
+      <div className="col-xl-2 text-center">
+        <div className="single-brand">
+          <img src="homeassets/img/brand/04.png" alt />
+        </div>
+      </div>
+      <div className="col-xl-2 text-center">
+        <div className="single-brand">
+          <img src="homeassets/img/brand/05.png" alt />
+        </div>
+      </div>
+      <div className="col-xl-2 text-center">
+        <div className="single-brand">
+          <img src="homeassets/img/brand/01.png" alt />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{/* brand-area-end */}
+
         </main>
         {/* JS here */}
         <script src="homeassets/js/vendor/modernizr-3.5.0.min.js"></script>

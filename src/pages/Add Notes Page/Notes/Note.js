@@ -1,4 +1,4 @@
-import styles from "./styles.module.css";
+
 import React, { useEffect, useState } from "react";
 
 export default function Note(props) {

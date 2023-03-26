@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {useNavigate} from "react-router-dom"
-
-const Home = ({socket}) => {
+import style from "./styles.module.css";
+const Homechat = ({socket}) => {
     const navigate = useNavigate()
     const [userName, setUserName] = useState("")
 
@@ -12,20 +12,20 @@ const Home = ({socket}) => {
         navigate("/chat")
     }
   return (
-    <form className='home__container' onSubmit={handleSubmit}>
-        <h2 className='home__header'>Sign in to Open Chat</h2>
-        <label htmlFor="username">Username</label>
+    <form className={style.home__container} onSubmit={handleSubmit}>
+        <h2 className={style.home__header}>Entrer votre nom d'utlisateur</h2>
+        <label htmlFor="username">nom d'utilisateur</label>
         <input type="text" 
         minLength={6} 
         name="username" 
         id='username'
-        className='username__input' 
+        className={style.username__input} 
         value={userName} 
         onChange={e => setUserName(e.target.value)}
         />
-        <button className='home__cta'>SIGN IN</button>
+        <button className={style.home__cta}>SIGN IN</button>
     </form>
   )
 }
 
-export default Home
+export default Homechat
