@@ -18,7 +18,8 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 //import ChatPage from "./pages/ChatPage/ChatPage";
 //const socket = socketIO.connect("http://localhost:4000");
 import Home from "./pages/Home Page/Home/Home";
-
+import Sidebar from "./pages/Sidebar/SideBar";
+import Calendrier from "./pages/Calendrier/Calendrier";
 function App() {
   return (
     <div className="App">
@@ -43,6 +44,8 @@ function App() {
 
           <Route path="/AddFiles" element={<AddFiles />} />
           <Route path="/ListFiles" element={<ListFiles />} />
+          <Route path="side" element={<Sidebar/>}/>
+          <Route path="/Calendrier" element={<Calendrier />} />
         </Routes>
       </Router>
     </div>

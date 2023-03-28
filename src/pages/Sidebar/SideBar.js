@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
@@ -61,6 +62,7 @@ const Sidebar = () => {
                   </span>
                 </a>
               </li>
+              <Link to="/Calendrier">
 
               <li className={styles.nav_link}>
                 <a className={styles.a} href="#">
@@ -70,10 +72,11 @@ const Sidebar = () => {
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                    Schedules
+                  Calendrier
                   </span>
                 </a>
               </li>
+              </Link>
 
               <li className={styles.nav_link}>
                 <a className={styles.a} href="#">
