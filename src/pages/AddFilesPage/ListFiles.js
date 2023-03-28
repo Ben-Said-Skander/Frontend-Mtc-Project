@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Sidebar from "../../components/Sidebar/Sidebar";
+import Sidebar from "../Sidebar/SideBar";
 import style from "./styles.module.css";
 //This component displays the list of imported files
 export default function ListFiles() {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import Note from "./Note";
-import Sidebar from "../../../components/Sidebar/Sidebar";
+import Sidebar from "../../Sidebar/SideBar";
 export default function Notes() {
   const [notes, setNotes] = useState([]);
   const [title, setTitle] = useState("");
@@ -49,7 +49,7 @@ export default function Notes() {
         <h2 className={styles.title}>{title}</h2>
         <div className={styles.center}>
           <Link to="/AddNotes">
-            <button type="button" className={styles.blue_btn}>
+            <button type="button" className={styles.btn}>
               Add Note
             </button>
           </Link>

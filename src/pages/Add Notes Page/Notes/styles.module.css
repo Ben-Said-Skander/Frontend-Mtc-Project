@@ -1,19 +1,29 @@
 .note_container {
   background-color: #f8f8f8;
-  padding: 40px 300px;
+  height: 0;
 }
 /** {
   background-color: #f8f8f8;
 }*/
-.blue_btn {
-  color: aliceblue;
-  padding: 12px 0;
-  background-color: #080039;
+.btn {
   border-radius: 20px;
-  width: 200px;
+  border: 1px solid #ea3313;
+  background-color: #ea3313;
+  color: #ffffff;
+  font-size: 12px;
   font-weight: bold;
-  font-size: 15px;
-  cursor: pointer;
+  margin-top: 8px;
+  padding: 14px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn:focus {
+  outline: none;
 }
 .center {
   display: flex;
@@ -27,6 +37,7 @@
   display: flex;
   width: 100%;
   min-height: 20vh;
+
 }
 
 .head {
@@ -35,11 +46,16 @@
   width: 100%;
   font-size: 24px;
   font-weight: bold;
+  padding: 40px 300px;
+
 }
 .notes_list {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  padding: 40px 300px;
+  padding-top: 0px;
+
 }
 .note {
   background-color: #fef68a;
@@ -54,4 +70,5 @@
   color: #080039;
   font-size: 26px;
   font-weight: bold;
+
 }
