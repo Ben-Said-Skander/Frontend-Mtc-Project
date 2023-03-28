@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import Sidebar from "../../../components/Sidebar/Sidebar";
+import Sidebar from "../../Sidebar/SideBar";
+import { FaArrowLeft } from "react-icons/fa";
 export default function AddNotes() {
   const [noteText, setNoteText] = useState("");
   const handClick = () => {
@@ -25,24 +26,26 @@ export default function AddNotes() {
     <div>
       <Sidebar />
       <div className={styles.note_container}>
-        <h1 className={styles.head}>
+      
+          <div className={styles.arrow_container} >
           <Link to="/Notes">
-            <div className={styles.arrow} />{" "}
+            <FaArrowLeft className={styles.arrow_icon}/>
           </Link>
-          Note and Reminders
-        </h1>
+             Note and Reminders
+          </div>
         <br />
         <br />
-        <br />
-        <div>
-          <textarea value={noteText} onChange={changeNote}></textarea>
+        <br /> 
+        <div className={styles.textarea_container}>
+        <textarea className={styles.text}  value={noteText} onChange={changeNote}></textarea>
         </div>
+        
         <br />
         <div className={styles.center}>
           <Link to="/Notes">
             <button
               type="button"
-              className={styles.blue_btn}
+              className={styles.btn}
               onClick={handClick}
             >
               Confirm
