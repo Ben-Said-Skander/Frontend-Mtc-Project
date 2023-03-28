@@ -1,40 +1,30 @@
 import React from 'react';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
 
 export const SidebarItem = [
   {
-    title: 'Profile', //add name 
-    icon: <IoIcons.IoIosPaper />,
-    cName: 'nav-text'
-  },
+    title: 'Profile',
+    icon: <img src="https://pbs.twimg.com/profile_images/1485050791488483328/UNJ05AV8_400x400.jpg" alt="image" style={{width: '50%', display: 'block', margin: 'auto', listStyle: 'none'}} />,
+    cName: 'nav-image'
 
+  },
   {
-    title: 'education',
-    icon: <IoIcons.IoMdPeople />,
-    cName: 'nav-text'
-  },  {
-    title: 'education',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople />,
-    cName: 'nav-text'
-  },  {
-    title: 'education',
-    path: '/team',
-    icon: <IoIcons.IoMdPeople />,
+    title: 'Bio',
     cName: 'nav-text'
   },
   {
-    title: 'Messages',
-    path: '/messages',
-    icon: <FaIcons.FaEnvelopeOpenText />,
+    title: 'Age :',
     cName: 'nav-text'
   },
   {
-    title: 'Support',
-    path: '/support',
-    icon: <IoIcons.IoMdHelpCircle />,
+    title: 'education : ',
+    cName: 'nav-text'
+  },
+  {
+    title: 'Experience : ',
+    cName: 'nav-text'
+  },
+  {
+    title: 'Experience : ',
     cName: 'nav-text'
   }
 ];
