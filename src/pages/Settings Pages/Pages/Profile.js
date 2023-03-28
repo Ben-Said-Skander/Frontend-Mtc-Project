@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import Nav from "./Nav";
-import styles from "./styles.module.css";
+import React, { useState } from 'react';
+import Nav from './Nav';
+import styles from './styles.module.css';
 const Profile = () => {
   //add State
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [userName, setUserName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [location, setLocation] = useState("");
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [location, setLocation] = useState('');
 
   const handelClick = () => {
     // list d'objet nom valeur
@@ -21,18 +21,18 @@ const Profile = () => {
       location: location,
     };
 
-    let settId = JSON.parse(localStorage.getItem("settId") || "1");
+    let settId = JSON.parse(localStorage.getItem('settId') || '1');
 
     data.id = settId;
 
-    let setting = JSON.parse(localStorage.getItem("setting") || "[]");
+    let setting = JSON.parse(localStorage.getItem('setting') || '[]');
 
     setting.push(data);
     console.log(setting);
 
-    localStorage.setItem("setting", JSON.stringify(setting));
+    localStorage.setItem('setting', JSON.stringify(setting));
 
-    localStorage.setItem("settId", JSON.stringify(settId + 1));
+    localStorage.setItem('settId', JSON.stringify(settId + 1));
   };
   const changeFirstName = (event) => {
     setFirstName(event.target.value);
@@ -67,66 +67,66 @@ const Profile = () => {
           role="tabpanel"
           aria-labelledby="profile-tab"
         >
-          <div class={styles.title}> Profile Settings </div>
+          <div class={styles.title}> Paramètres de profil </div>
           <form className={styles.form} action="#" id="forum">
             <div className={styles.user_details}>
               <div className={styles.input_box}>
-                <span className={styles.details}> Firstname</span>
+                <span className={styles.details}> Prénom</span>
                 <input
                   className={styles.input}
                   type="text"
-                  placeholder="Enter Firstname"
+                  placeholder="Entrez votre prénom"
                   id="nom"
                   onChange={changeFirstName}
                 />
               </div>
               <div className={styles.input_box}>
-                <span className={styles.details}>Lastname</span>
+                <span className={styles.details}>Nom</span>
                 <input
                   className={styles.input}
                   type="text"
-                  placeholder="Enter lastname"
+                  placeholder="Entrer le nom de famille"
                   id="prénom"
                   onChange={changeLastName}
                 />
               </div>
               <div className={styles.input_box}>
-                <span className={styles.details}>Username</span>
+                <span className={styles.details}>Nom d'utilisateur</span>
                 <input
                   className={styles.input}
                   type="text"
-                  placeholder="Enter Username"
+                  placeholder="Saisissez votre nom d'utilisateur"
                   id="userame"
                   onChange={changeUserName}
                 />
               </div>
               <div className={styles.input_box}>
-                <span className={styles.details}> Phone Number </span>
+                <span className={styles.details}> Numéro de téléphone </span>
                 <input
                   className={styles.input}
                   type="text"
-                  placeholder="Enter Phone Number"
+                  placeholder="Entrez le numéro de téléphone"
                   id="telephone"
                   onChange={changephoneNumber}
                 />
               </div>
               <div className={styles.input_box}>
-                <span className={styles.details}>Email</span>
+                <span className={styles.details}>E-mail</span>
                 <input
                   className={styles.input}
                   type="email"
-                  placeholder="Enter Email"
+                  placeholder="Entrez l'e-mail"
                   id="email"
                   onChange={changeEmail}
                 />
               </div>
 
               <div className={styles.input_box}>
-                <span className={styles.details}>location</span>
+                <span className={styles.details}>emplacement</span>
                 <input
                   className={styles.input}
                   type="text"
-                  placeholder="Enter Location"
+                  placeholder="Entrez l'emplacement"
                   id="adresse"
                   onChange={changeLocation}
                 />
@@ -138,14 +138,14 @@ const Profile = () => {
                 className={styles.input}
                 id="submit "
                 type="button"
-                value="Update"
+                value="Mise à jour"
                 onClick={handelClick()}
               />
               <input
                 className={styles.input}
                 id="restart "
                 type="button"
-                value="Cancel"
+                value="Annuler"
               />
             </div>
           </form>

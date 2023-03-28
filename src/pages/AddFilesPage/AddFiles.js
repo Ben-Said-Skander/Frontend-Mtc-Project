@@ -1,36 +1,36 @@
-import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Viewer, Worker } from "@react-pdf-viewer/core";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
-import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
+import React from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Viewer, Worker } from '@react-pdf-viewer/core';
+import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+import '@react-pdf-viewer/core/lib/styles/index.css';
+import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 //import Navbar from "../../components/Right Sidebar/Sidebar";
-import style from "./styles.module.css";
-import Sidebar from "../../components/Sidebar/Sidebar";
+import style from './styles.module.css';
+import Sidebar from '../../components/Sidebar/SideBar';
 //This component allows you to add files from the 'add' button in order to view or print this file from the 'upload' button
 export default function AddFiles() {
   const navigate = useNavigate();
   const [pdfFile, setPdfFile] = useState(null);
   const [viewPdfFile, setViewPdfFile] = useState(null);
-  const fileType = ["application/pdf"];
+  const fileType = ['application/pdf'];
   const newplugin = defaultLayoutPlugin();
-  const [fileName, setFileName] = useState("");
-  const [dateFile, setDateFile] = useState("");
+  const [fileName, setFileName] = useState('');
+  const [dateFile, setDateFile] = useState('');
   const handleClick = () => {
     let data = {
       fileName,
       dateFile,
     };
-    let fileId = JSON.parse(localStorage.getItem("fileId") || "1");
+    let fileId = JSON.parse(localStorage.getItem('fileId') || '1');
     data.id = fileId;
-    let files = JSON.parse(localStorage.getItem("files") || "[]");
+    let files = JSON.parse(localStorage.getItem('files') || '[]');
     files.push(data);
     console.log(files);
-    localStorage.setItem("files", JSON.stringify(files));
-    localStorage.setItem("fileId", JSON.stringify(fileId + 1));
-    navigate("/ListFiles");
+    localStorage.setItem('files', JSON.stringify(files));
+    localStorage.setItem('fileId', JSON.stringify(fileId + 1));
+    navigate('/ListFiles');
   };
 
   const handleChangee = (e) => {
@@ -46,7 +46,7 @@ export default function AddFiles() {
         setPdfFile(null);
       }
     } else {
-      console.log("please select file");
+      console.log('please select file');
     }
     console.log(e.target.files[0]);
     let s = e.target.files[0];
@@ -86,7 +86,7 @@ export default function AddFiles() {
         <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.15.349/build/pdf.worker.min.js">
           {viewPdfFile && (
             <>
-              {" "}
+              {' '}
               <Viewer fileUrl={viewPdfFile} plugins={[newplugin]} />
             </>
           )}

@@ -1,6 +1,6 @@
-import React from "react";
-import Nav from "./Nav";
-import styles from "./styles.module.css";
+import React from 'react';
+import Nav from './Nav';
+import styles from './styles.module.css';
 const Interests = () => {
   return (
     <div className={styles.menu_s}>
@@ -11,8 +11,8 @@ const Interests = () => {
         {/*  profile Setting   */}
 
         <div className={styles.tab_content} id="">
-          <div className={styles.title}> interests Settings </div>
-          <div className={styles.Quetion}> What are you interested in ? </div>
+          <div className={styles.title}> intérêts Paramètres </div>
+          <div className={styles.Quetion}> Qu'est-ce qui vous intéresse ? </div>
           <section className={styles.radio_section}>
             <div className={styles.radio_list}>
               <div className={styles.radio_item}>
@@ -23,7 +23,7 @@ const Interests = () => {
                   id="radio1"
                 />
                 <label className={styles.label} htmlFor="radio1">
-                  Accounting{" "}
+                  Accounting{' '}
                 </label>
               </div>
               <div className={styles.radio_item}>
@@ -34,7 +34,7 @@ const Interests = () => {
                   id="radio2"
                 />
                 <label className={styles.label} htmlFor="radio2">
-                  {" "}
+                  {' '}
                   design
                 </label>
               </div>
@@ -46,7 +46,7 @@ const Interests = () => {
                   id="radio3"
                 />
                 <label className={styles.label} htmlFor="radio3">
-                  {" "}
+                  {' '}
                   consulting
                 </label>
               </div>
@@ -58,7 +58,7 @@ const Interests = () => {
                   id="radio4"
                 />
                 <label className={styles.label} htmlFor="radio4">
-                  {" "}
+                  {' '}
                   sports
                 </label>
               </div>
@@ -70,8 +70,8 @@ const Interests = () => {
                   id="radio5"
                 />
                 <label className={styles.label} htmlFor="radio5">
-                  {" "}
-                  Web{" "}
+                  {' '}
+                  Web{' '}
                 </label>
               </div>
             </div>
@@ -84,7 +84,7 @@ const Interests = () => {
                   id="radio6"
                 />
                 <label className={styles.label} htmlFor="radio6">
-                  {" "}
+                  {' '}
                   financial
                 </label>
               </div>
@@ -96,7 +96,7 @@ const Interests = () => {
                   id="radio7"
                 />
                 <label className={styles.label} htmlFor="radio7">
-                  Music{" "}
+                  Music{' '}
                 </label>
               </div>
               <div className={styles.radio_item}>
@@ -107,7 +107,7 @@ const Interests = () => {
                   id="radio8"
                 />
                 <label className={styles.label} htmlFor="radio8">
-                  {" "}
+                  {' '}
                   Gaming
                 </label>
               </div>
@@ -119,7 +119,7 @@ const Interests = () => {
                   id="radio9"
                 />
                 <label className={styles.label} htmlFor="radio9">
-                  Tech{" "}
+                  Tech{' '}
                 </label>
               </div>
               <div className={styles.radio_item}>
@@ -130,14 +130,14 @@ const Interests = () => {
                   id="radio10"
                 />
                 <label className={styles.label} htmlFor="radio10">
-                  Other
+                  autre
                 </label>
               </div>
             </div>
           </section>
 
           <div className={styles.radio_button}>
-            <input className={styles.input} type="button" value="Submit" />
+            <input className={styles.input} type="button" value="soumettre" />
           </div>
         </div>
       </div>

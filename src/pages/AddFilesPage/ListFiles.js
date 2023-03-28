@@ -1,13 +1,13 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import Sidebar from "../../components/Sidebar/Sidebar";
-import style from "./styles.module.css";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import Sidebar from '../../components/Sidebar/SideBar';
+import style from './styles.module.css';
 //This component displays the list of imported files
 export default function ListFiles() {
   const [files, setFiles] = useState([]);
-  const [searchFile, setSearchFile] = useState("");
+  const [searchFile, setSearchFile] = useState('');
   useEffect(() => {
-    let files = JSON.parse(localStorage.getItem("files") || "[]");
+    let files = JSON.parse(localStorage.getItem('files') || '[]');
     setFiles(files);
   }, []);
 
@@ -33,7 +33,7 @@ export default function ListFiles() {
       <div className={style.liste}>
         {files
           .filter((val) => {
-            if (searchFile == "") {
+            if (searchFile == '') {
               return val;
             } else if (
               val.fileName.toLowerCase().includes(searchFile.toLowerCase())

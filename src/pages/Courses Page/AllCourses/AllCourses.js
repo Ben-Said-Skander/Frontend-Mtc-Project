@@ -1,59 +1,59 @@
-import { useState, useEffect } from "react";
-import { nanoid } from "nanoid";
-import Header from "../Header/Header";
-import Search from "../Search Component/Search";
-import Profs from "../../Instructors Page/Instructor List/InstructorList";
-import { Link } from "react-router-dom";
-import style from "./styles.module.css";
-import Sidebar from "../../../components/Sidebar/Sidebar";
+import { useState, useEffect } from 'react';
+import { nanoid } from 'nanoid';
+import Header from '../Header/Header';
+import Search from '../Search Component/Search';
+import Profs from '../../Instructors Page/Instructor List/InstructorList';
+import { Link } from 'react-router-dom';
+import style from './styles.module.css';
+import Sidebar from '../../../components/Sidebar/SideBar';
 export default function AllCourses() {
   const [profs, setProfs] = useState([
     {
       id: nanoid(),
-      name: "Aicha",
-      age: "22",
-      education: "BAC+5",
+      name: 'Aicha',
+      age: '22',
+      education: 'BAC+5',
       experience: 3,
-      contact: "aicha@gamil.com",
+      contact: 'aicha@gamil.com',
     },
     {
       id: nanoid(),
-      name: "Aline",
-      age: "22",
-      education: "BAC+3",
+      name: 'Aline',
+      age: '22',
+      education: 'BAC+3',
       experience: 1,
-      contact: "aline@gamil.com",
+      contact: 'aline@gamil.com',
     },
     {
       id: nanoid(),
-      name: "Samar",
-      age: "27",
-      education: "BAC+7",
+      name: 'Samar',
+      age: '27',
+      education: 'BAC+7',
       experience: 2,
-      contact: "samar@gamil.com",
+      contact: 'samar@gamil.com',
     },
     {
       id: nanoid(),
-      name: "Mohamed",
-      age: "24",
-      education: "BAC+2",
+      name: 'Mohamed',
+      age: '24',
+      education: 'BAC+2',
       experience: 1,
-      contact: "mohamed@gamil.com",
+      contact: 'mohamed@gamil.com',
     },
   ]);
 
-  const [searchName, setSearchName] = useState("");
+  const [searchName, setSearchName] = useState('');
 
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem("react-profs-app-data", JSON.stringify(profs));
+    localStorage.setItem('react-profs-app-data', JSON.stringify(profs));
   }, [profs]);
 
   return (
     <div>
       <Sidebar />
-      <div className={`${style.darkMode && "dark-mode"}`}>
+      <div className={`${style.darkMode && 'dark-mode'}`}>
         <div className={style.container}>
           <Header handleToggleDarkMode={setDarkMode} />
           <br></br>
@@ -83,7 +83,7 @@ export default function AllCourses() {
             <button className={style.btn}>Previous</button>
           </Link>
         </div>
-      </div>{" "}
+      </div>{' '}
     </div>
   );
 }

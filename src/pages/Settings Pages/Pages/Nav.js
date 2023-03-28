@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styles from "./styles.module.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './styles.module.css';
 const Nav = () => {
   return (
     <div>
@@ -9,29 +9,31 @@ const Nav = () => {
 
         <div className={styles.profile}>
           <img className={styles.img} src=" " alt="img" />
-          <h3 className={styles.h3}>Username</h3>
+          <h4 className={styles.h4}>Nom d'utilisateur</h4>
           <p className={styles.p}>BIO</p>
         </div>
 
         {/*menu item*/}
         <Link to="/" className={styles.a}>
-          {" "}
-          <i className={styles.i + " " + "fa fa-user"}></i>
-          <span>profile</span>
+          {' '}
+          <i className={styles.i + ' ' + 'fa fa-user'}></i>
+          <span>profil</span>
         </Link>
         <Link to="/Password" className={styles.a}>
-          <i className={styles.i + " " + "fa fa-key"}></i>
-          <span>password</span>
+          <i className={styles.i + ' ' + 'fa fa-key'}></i>
+          <span>mot de passe</span>
         </Link>
         <Link to="/Interests" className={styles.a}>
-          <i className={styles.i + " " + "fa fa-thumb-tack"}></i>
-          <span>interests</span>
+          <i className={styles.i + ' ' + 'fa fa-thumb-tack'}></i>
+          <span>intérêts</span>
         </Link>
 
         <div className={styles.logout}>
-          {" "}
-          <i className={styles.i + " " + "fa fa-sign-out"}></i>
-          <span>Logout</span>{" "}
+          {' '}
+          <button className="logout_b">
+            {' '}
+            déconnecter<i className={styles.i + ' ' + 'fa fa-sign-out'}></i>
+          </button>{' '}
         </div>
       </div>
     </div>

@@ -1,38 +1,38 @@
-import { useState, useEffect } from "react";
-import { nanoid } from "nanoid";
-import CoursesList from "../CoursesList/CoursesList";
-import Header from "../Header/Header";
-import Search from "../Search Component/Search";
-import { Link } from "react-router-dom";
-import style from "./styles.module.css";
-import Sidebar from "../../../components/Sidebar/Sidebar";
+import { useState, useEffect } from 'react';
+import { nanoid } from 'nanoid';
+import CoursesList from '../CoursesList/CoursesList';
+import Header from '../Header/Header';
+import Search from '../Search Component/Search';
+import { Link } from 'react-router-dom';
+import style from './styles.module.css';
+import Sidebar from '../../../components/Sidebar/SideBar';
 const Dashbord = () => {
   const [courses, setCourses] = useState([
     {
       id: nanoid(),
-      name: "JAVA",
+      name: 'JAVA',
     },
     {
       id: nanoid(),
-      name: "Python",
+      name: 'Python',
     },
     {
       id: nanoid(),
-      name: "Math",
+      name: 'Math',
     },
     {
       id: nanoid(),
-      name: "Adobe",
+      name: 'Adobe',
     },
   ]);
 
-  const [searchName, setSearchName] = useState("");
+  const [searchName, setSearchName] = useState('');
 
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const savedCourses = JSON.parse(
-      localStorage.getItem("react-courses-app-data")
+      localStorage.getItem('react-courses-app-data')
     );
 
     if (savedCourses) {
@@ -41,7 +41,7 @@ const Dashbord = () => {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("react-courses-app-data", JSON.stringify(courses));
+    localStorage.setItem('react-courses-app-data', JSON.stringify(courses));
   }, [courses]);
 
   const addCourse = (name) => {
@@ -61,7 +61,7 @@ const Dashbord = () => {
   return (
     <div>
       <Sidebar />
-      <div className={`${style.darkMode && "dark-mode"}`}>
+      <div className={`${style.darkMode && 'dark-mode'}`}>
         <div className={style.container}>
           <Header handleToggleDarkMode={setDarkMode} />
           <br></br>
@@ -91,7 +91,7 @@ const Dashbord = () => {
             handleDeleteCourse={deleteCourse}
           />
         </div>
-      </div>{" "}
+      </div>{' '}
     </div>
   );
 };

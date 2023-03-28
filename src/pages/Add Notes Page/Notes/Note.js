@@ -1,6 +1,5 @@
-
-import React, { useEffect, useState } from "react";
-
+import React, { useEffect, useState } from 'react';
+import styles from './styles.module.css';
 export default function Note(props) {
   const [a, setA] = useState();
   useEffect(() => {
@@ -10,11 +9,11 @@ export default function Note(props) {
     console.log(props.value.id);
 
     if (props.value.id % 3 == 2) {
-      return ["#11B99E"]; //green
+      return ['#11B99E']; //green
     } else if (props.value.id % 3 == 1) {
-      return ["#FFC406"]; //yellow
+      return ['#FFC406']; //yellow
     } else {
-      return ["#B4F6C1"]; //pistache
+      return ['#B4F6C1']; //pistache
     }
   };
   return (

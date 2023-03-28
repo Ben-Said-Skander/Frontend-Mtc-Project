@@ -1,17 +1,17 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: 'Poppins';
 }
 
 :root {
   /* ===== Colors ===== */
   --body-color: #e4e9f7;
-  --sidebar-color: linear-gradient(0deg, #c624ff 0%, #2d63fc 100%) !important ;
-  --primary-color: #6b08a9;
+  --sidebar-color: linear-gradient(to top left, #ff9900, #b71b0a) !important ;
+  --primary-color: #b71b0a;
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
   --text-color: #080808;
@@ -148,8 +148,8 @@ body {
   font-weight: 500;
   transition: var(--tran-05);
 }
-.sidebar_c ul{
-  padding-left:0;
+.sidebar_c ul {
+  padding-left: 0;
 }
 .sidebar_c li a {
   list-style: none;

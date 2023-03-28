@@ -1,20 +1,20 @@
-import React from "react";
-import { useState } from "react";
-import styles from "./styles.module.css";
-import { Link, useNavigate } from "react-router-dom";
-import Sidebar from "../../../components/Sidebar/Sidebar";
+import React from 'react';
+import { useState } from 'react';
+import styles from './styles.module.css';
+import { Link, useNavigate } from 'react-router-dom';
+import Sidebar from '../../../components/Sidebar/SideBar';
 export default function AddNotes() {
-  const [noteText, setNoteText] = useState("");
+  const [noteText, setNoteText] = useState('');
   const handClick = () => {
     let data = {
       noteText: noteText,
     };
-    let noteId = JSON.parse(localStorage.getItem("noteId") || "1");
+    let noteId = JSON.parse(localStorage.getItem('noteId') || '1');
     data.id = noteId;
-    let notes = JSON.parse(localStorage.getItem("notes") || "[]");
+    let notes = JSON.parse(localStorage.getItem('notes') || '[]');
     notes.push(data);
-    localStorage.setItem("notes", JSON.stringify(notes));
-    localStorage.setItem("noteId", JSON.stringify(noteId + 1));
+    localStorage.setItem('notes', JSON.stringify(notes));
+    localStorage.setItem('noteId', JSON.stringify(noteId + 1));
   };
 
   const changeNote = (event) => {
@@ -27,7 +27,7 @@ export default function AddNotes() {
       <div className={styles.note_container}>
         <h1 className={styles.head}>
           <Link to="/Notes">
-            <div className={styles.arrow} />{" "}
+            <div className={styles.arrow} />{' '}
           </Link>
           Note and Reminders
         </h1>
@@ -49,7 +49,7 @@ export default function AddNotes() {
             </button>
           </Link>
         </div>
-      </div>{" "}
+      </div>{' '}
     </div>
   );
 }

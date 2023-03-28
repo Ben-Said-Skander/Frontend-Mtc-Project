@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import styles from "./styles.module.css";
-import Note from "./Note";
-import Sidebar from "../../../components/Sidebar/Sidebar";
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import styles from './styles.module.css';
+import Note from './Note';
+import Sidebar from '../../../components/Sidebar/SideBar';
 export default function Notes() {
   const [notes, setNotes] = useState([]);
-  const [title, setTitle] = useState("");
-  const [note, setNote] = useState("");
+  const [title, setTitle] = useState('');
+  const [note, setNote] = useState('');
 
   const navigate = useNavigate();
   useEffect(() => {
-    let notes = JSON.parse(localStorage.getItem("notes") || "[]");
+    let notes = JSON.parse(localStorage.getItem('notes') || '[]');
     if (notes.length == 0) {
-      setTitle("No notes to display");
-      console.log("No notes to display");
+      setTitle('No notes to display');
+      console.log('No notes to display');
     } else {
-      setTitle("");
+      setTitle('');
       setNotes(notes);
       console.log(notes);
     }
   }, []);
 
   const handClick = () => {
-    navigate("/AddNotes");
+    navigate('/AddNotes');
   };
 
   const getAllNotes = () => {
-    let notes = JSON.parse(localStorage.getItem("notes") || "[]");
-    console.log("here ", notes);
+    let notes = JSON.parse(localStorage.getItem('notes') || '[]');
+    console.log('here ', notes);
 
     setNotes(notes);
   };
@@ -54,7 +54,7 @@ export default function Notes() {
             </button>
           </Link>
         </div>
-      </div>{" "}
+      </div>{' '}
     </div>
   );
 }
