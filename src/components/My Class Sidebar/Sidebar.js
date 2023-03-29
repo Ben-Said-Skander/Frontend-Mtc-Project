@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
-const Sidebar = () => {
+const ClassSidebar = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   const toggleSidebar = () => {
@@ -55,6 +55,45 @@ const Sidebar = () => {
                 <a className={styles.a} href="#">
                   <i
                     className={
+                      styles.i + " " + styles.icon + " " + "fa fa-clipboard "
+                    }
+                  ></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    Chat
+                  </span>
+                </a>
+              </li>
+
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
+                  <i
+                    className={
+                      styles.i + " " + styles.icon + " " + "fa fa-clipboard "
+                    }
+                  ></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    Notes
+                  </span>
+                </a>
+              </li>
+
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
+                  <i
+                    className={
+                      styles.i + " " + styles.icon + " " + "fa fa-calendar "
+                    }
+                  ></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    Horaires
+                  </span>
+                </a>
+              </li>
+
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
+                  <i
+                    className={
                       styles.i +
                       " " +
                       styles.icon +
@@ -88,4 +127,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default ClassSidebar;

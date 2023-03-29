@@ -11,8 +11,8 @@ const Interests = () => {
         {/*  profile Setting   */}
 
         <div className={styles.tab_content} id="">
-          <div className={styles.title}> interests Settings </div>
-          <div className={styles.Quetion}> What are you interested in ? </div>
+          <div className={styles.title}> Intérêts Paramètres </div>
+          <div className={styles.Quetion}> Qu'est-ce qui vous intéresse ? </div>
           <section className={styles.radio_section}>
             <div className={styles.radio_list}>
               <div className={styles.radio_item}>
@@ -130,14 +130,14 @@ const Interests = () => {
                   id="radio10"
                 />
                 <label className={styles.label} htmlFor="radio10">
-                  Other
+                  autre
                 </label>
               </div>
             </div>
           </section>
 
           <div className={styles.radio_button}>
-            <input className={styles.input} type="button" value="Submit" />
+            <input className={styles.input} type="button" value="Soumettre" />
           </div>
         </div>
       </div>

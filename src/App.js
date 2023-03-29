@@ -18,7 +18,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 //import ChatPage from "./pages/ChatPage/ChatPage";
 //const socket = socketIO.connect("http://localhost:4000");
 import Home from "./pages/Home Page/Home/Home";
-import Sidebar from "./pages/Sidebar/SideBar";
+import Sidebar from "./components/Sidebar/Sidebar";
+import RightSidebar from "./components/Right Sidebar/Sidebar";
+import ClassSidebar from "./components/My Class Sidebar/Sidebar";
 import Calendrier from "./pages/Calendrier/Calendrier";
 function App() {
   return (
@@ -42,10 +44,14 @@ function App() {
           <Route path="/Notes" element={<Notes />} />
           <Route path="/AddNotes" element={<AddNotes />} />
 
+          <Route path="/Calendrier" element={<Calendrier />} />
+
+          <Route path="/Sidebar" element={<Sidebar />} />
+          <Route path="/RightSidebar" element={<RightSidebar />} />
+          <Route path="/ClassSidebar" element={<ClassSidebar />} />
+
           <Route path="/AddFiles" element={<AddFiles />} />
           <Route path="/ListFiles" element={<ListFiles />} />
-          <Route path="side" element={<Sidebar/>}/>
-          <Route path="/Calendrier" element={<Calendrier />} />
         </Routes>
       </Router>
     </div>
@@ -54,5 +60,7 @@ function App() {
 /*
           <Route path="/Homechat" element={<Homechat socket={socket} />} />
           <Route path="/Chat" element={<ChatPage socket={socket} />} />
+
+                 
 */
 export default App;

@@ -9,7 +9,7 @@ const Nav = () => {
 
         <div className={styles.profile}>
           <img className={styles.img} src=" " alt="img" />
-          <h3 className={styles.h3}>Username</h3>
+          <h4 className={styles.h4}>Nom d'utilisateur</h4>
           <p className={styles.p}>BIO</p>
         </div>
 
@@ -17,21 +17,23 @@ const Nav = () => {
         <Link to="/" className={styles.a}>
           {" "}
           <i className={styles.i + " " + "fa fa-user"}></i>
-          <span>profile</span>
+          <span>profil</span>
         </Link>
         <Link to="/Password" className={styles.a}>
           <i className={styles.i + " " + "fa fa-key"}></i>
-          <span>password</span>
+          <span>mot de passe</span>
         </Link>
         <Link to="/Interests" className={styles.a}>
           <i className={styles.i + " " + "fa fa-thumb-tack"}></i>
-          <span>interests</span>
+          <span>intérêts</span>
         </Link>
 
         <div className={styles.logout}>
           {" "}
-          <i className={styles.i + " " + "fa fa-sign-out"}></i>
-          <span>Logout</span>{" "}
+          <button className="logout_b">
+            {" "}
+            déconnecter<i className={styles.i + " " + "fa fa-sign-out"}></i>
+          </button>{" "}
         </div>
       </div>
     </div>

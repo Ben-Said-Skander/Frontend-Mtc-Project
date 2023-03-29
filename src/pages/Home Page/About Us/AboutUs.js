@@ -1,6 +1,6 @@
-import React from "react";
-import Footer from "./Footer";
-import styles from "./styles.module.css";
+import React from 'react';
+import Footer from './Footer';
+import styles from './styles.module.css';
 const AboutUs = () => {
   return (
     <div>
@@ -15,9 +15,9 @@ const AboutUs = () => {
         <div class={styles.text_container}>
           <h1 className={styles.h1}>Qui sommes nous</h1>
           <p className={styles.p}>
-            {" "}
+            {' '}
             <h4 className={styles.h4}>
-              {" "}
+              {' '}
               est un site éducatif multidisciplinaire, l'endroit où vous pouvez
               découvrir et apprendre à propos de toutes ce qui vous intéressent.
             </h4>
@@ -41,6 +41,8 @@ const AboutUs = () => {
     </div>
   );
 };
+
+
 
 export default AboutUs;
 /*
