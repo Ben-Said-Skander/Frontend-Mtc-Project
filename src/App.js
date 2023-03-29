@@ -22,6 +22,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import RightSidebar from "./components/Right Sidebar/Sidebar";
 import ClassSidebar from "./components/My Class Sidebar/Sidebar";
 import Calendrier from "./pages/Calendrier/Calendrier";
+import Navbar from "./components/Right Sidebar/Sidebar";
 function App() {
   return (
     <div className="App">
@@ -52,6 +53,8 @@ function App() {
 
           <Route path="/AddFiles" element={<AddFiles />} />
           <Route path="/ListFiles" element={<ListFiles />} />
+          <Route path="side" element={<Sidebar/>}/>
+          <Route path="/Calendrier" element={<Calendrier />} />
         </Routes>
       </Router>
     </div>
