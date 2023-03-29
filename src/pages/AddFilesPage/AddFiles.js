@@ -9,6 +9,7 @@ import "@react-pdf-viewer/default-layout/lib/styles/index.css";
 //import Navbar from "../../components/Right Sidebar/Sidebar";
 import style from "./styles.module.css";
 import Sidebar from "../Sidebar/SideBar";
+import Navbar from "../../components/Right Sidebar/Sidebar";
 //This component allows you to add files from the 'add' button in order to view or print this file from the 'upload' button
 export default function AddFiles() {
   const navigate = useNavigate();
@@ -65,6 +66,7 @@ export default function AddFiles() {
   return (
     <div>
       <Sidebar />
+      <Navbar/>
       <form>
         <h3>Télécharger Fichiers</h3>
         <input
@@ -92,6 +94,7 @@ export default function AddFiles() {
           )}
           {!viewPdfFile && <></>}
         </Worker>
+
       </div>
     </div>
   );

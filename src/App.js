@@ -20,6 +20,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home Page/Home/Home";
 import Sidebar from "./pages/Sidebar/SideBar";
 import Calendrier from "./pages/Calendrier/Calendrier";
+import Navbar from "./components/Right Sidebar/Sidebar";
 function App() {
   return (
     <div className="App">
@@ -45,6 +46,7 @@ function App() {
           <Route path="/AddFiles" element={<AddFiles />} />
           <Route path="/ListFiles" element={<ListFiles />} />
           <Route path="side" element={<Sidebar/>}/>
+          <Route path="Right-sidebar" element={<Navbar/>}/>
           <Route path="/Calendrier" element={<Calendrier />} />
         </Routes>
       </Router>
