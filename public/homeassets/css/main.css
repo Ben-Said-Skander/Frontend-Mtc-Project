@@ -250,7 +250,21 @@ label {
 .black-bg {
   background: #062a35;
 }
-
+.rond1{
+ 
+ 
+  background: #F77D24;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-family: Sans-serif;
+  font-size: 18px;
+  padding-left: 5px;
+  min-height : 20px; 
+  padding : 5px;
+  
+}
 .black-soft-bg {
   background: #333333;
 }
@@ -3196,7 +3210,7 @@ label {
   color: #ea5822;
 }
 .course-cat-text h4 > span {
-  color: #708389;
+  color: #051642;
   font-size: 15px;
   font-weight: 400;
 }
