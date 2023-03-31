@@ -53,7 +53,7 @@ function App() {
 
           <Route path="/AddFiles" element={<AddFiles />} />
           <Route path="/ListFiles" element={<ListFiles />} />
-          <Route path="side" element={<Sidebar/>}/>
+          <Route path="/side" element={<Sidebar />} />
           <Route path="/Calendrier" element={<Calendrier />} />
         </Routes>
       </Router>

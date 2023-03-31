@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AboutUs from "../About Us/AboutUs";
-import Footer from "../About Us/Footer";
 export default function Home() {
   return (
     <div>
@@ -31,6 +30,7 @@ export default function Home() {
         <link rel="stylesheet" href="homeassets/css/meanmenu.css" />
         <link rel="stylesheet" href="homeassets/css/slick.css" />
         <link rel="stylesheet" href="homeassets/css/main.css" />
+
         {/* header-start */}
         <header className="header-transparent">
           <div
@@ -50,24 +50,16 @@ export default function Home() {
                   <div className="main-menu text-left ml-15">
                     <nav id="mobile-menu">
                       <ul>
-                        <li className="active">
-                          <a href="index.html">
-                            Home <i className="far fa-angle-down" />
-                          </a>
+                        <li>
+                          <a href="contact.html">Nos Cours </a>
                         </li>
                         <li>
-                          <a href="#">
-                            Cours <i className="far fa-angle-down" />
-                          </a>
+                          <a href="contact.html">Contacter nous </a>
                         </li>
                         <li>
-                          <a href="#">
-                            Instructeurs <i className="far fa-angle-down" />
-                          </a>
-                        </li>
-
-                        <li>
-                          <a href="contact.html">Contact</a>
+                          <Link to="/AboutUs">
+                            <a href="contact.html">A propos de nous </a>
+                          </Link>
                         </li>
                       </ul>
                     </nav>
@@ -79,7 +71,9 @@ export default function Home() {
                     <div className="header-sing d-none d-md-inline-block"></div>
                     <div>
                       {" "}
-                      <Link to="/Signin">Sign In</Link>
+                      <Link to="/Signin">
+                        <button className="rond1">S'identifier</button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -136,10 +130,8 @@ export default function Home() {
               <div className="row">
                 <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
                   <div className="section-title text-center mb-60">
-                    <span>
-                      <i className="fal fa-ellipsis-h" /> Nos Fonctionnalités{" "}
-                      <i className="fal fa-ellipsis-h" />
-                    </span>
+                    <span></span>
+                    <span></span>
                     <h2>Catégories des Cours </h2>
                   </div>
                 </div>
@@ -158,7 +150,8 @@ export default function Home() {
                       </h4>
                       <span>
                         {" "}
-                        Apprenez les principes de la conception Graphique{" "}
+                        Apprenez les principes de la conception Graphique et la
+                        calligraphie{" "}
                       </span>
                     </div>
                   </div>
@@ -192,7 +185,10 @@ export default function Home() {
                       <h4>
                         <a href="courses-details.html">Informatique</a>
                       </h4>
-                      <span>maîtriser les sciences informatiques</span>
+                      <span>
+                        maîtriser les sciences informatiques et les langages de
+                        programmation
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -328,6 +324,130 @@ export default function Home() {
             </div>
           </div>
           {/* brand-area-end */}
+          {/*we-area-area start*/}
+          <section className="we-are-area grey-bg pt-160 pb-100">
+            <div className="container">
+              <div className="row align-items-center">
+                <div className="col-xl-4 col-lg-5 col-md-12">
+                  <div className="skill-wrapper">
+                    <div className="section-title text-left mb-35">
+                      <span>
+                        <i className="fal fa-ellipsis-h" /> Qui sommes nous
+                      </span>
+                      <h2>Qui sommes nous</h2>
+                      <p>
+                        est un site éducatif multidisciplinaire, l'endroit où
+                        vous pouvez découvrir et apprendre à propos de toutes ce
+                        qui vous intéressent. Nous sommes une équipe dévouée
+                        d'enseignants, d'experts et de passionnés qui partagent
+                        la même mission : rendre l'apprentissage accessible à
+                        tous. Notre site propose une large gamme de cours en
+                        ligne couvrant de nombreux domaines, allant de la
+                        technologie à la santé en passant par les sciences
+                        sociales, les arts et les sciences.
+                        <br /> Que vous soyez à la recherche d'une formation
+                        pour votre carrière, d'un hobby passionnant ou
+                        simplement d'un moyen d'acquérir de nouvelles
+                        connaissances, nous avons ce qu'il vous faut.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-xl-8 col-lg-7 col-md-12">
+                  <div className="our-video pos-rel">
+                    <div className="video-thumb">
+                      <img src="homeassets/img/bg/video-bg-02.jpg" alt />
+                    </div>
+                    <div className="video-area">
+                      <a
+                        className="popup-video"
+                        href="https://www.youtube.com/watch?v=D-goSWGqI2U"
+                      >
+                        <i className="fas fa-play" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/*we-area-area end*/}
+          {/* contact-area-start */}
+          <div className="contact-area grey-bg pb-100">
+            <div className="container">
+              <div className="row">
+                <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
+                  <div className="section-title text-center mb-60">
+                    <span>
+                      <i className="fal fa-ellipsis-h" /> Contacter nous{" "}
+                      <i className="fal fa-ellipsis-h" />
+                    </span>
+                    <h2>Laissez-nous un message</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-xl-12">
+                  <div className="contact-form-area">
+                    <form
+                      action="#"
+                      className="subscribe contact-post-form contact-form"
+                    >
+                      <div className="row">
+                        <div className="col-xl-4">
+                          <div className="input-text">
+                            <input
+                              className="form-control"
+                              type="text"
+                              placeholder="Full Name Here"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-xl-4">
+                          <div className="input-text email-text">
+                            <input
+                              className="form-control"
+                              type="text"
+                              placeholder="Email Here"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-xl-4">
+                          <div className="input-text phone-text">
+                            <input
+                              className="form-control"
+                              type="text"
+                              placeholder="Phone Number"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <div className="input-text message-text">
+                            <textarea
+                              name
+                              id
+                              cols={30}
+                              rows={10}
+                              placeholder="Write  Message"
+                              defaultValue={""}
+                            />
+                          </div>
+                        </div>
+                        <div className="col-12">
+                          <div className="lg-btn lg-btn-03 text-center">
+                            <a className="c-btn" href="#">
+                              send message{" "}
+                              <i className="far fa-long-arrow-alt-right" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
         {/* JS here */}
         <script src="homeassets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -351,7 +471,6 @@ export default function Home() {
         <script src="homeassets/js/main.js"></script>
       </div>
       <AboutUs />
-      <Footer />
     </div>
   );
 }
