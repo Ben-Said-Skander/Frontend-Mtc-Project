@@ -18,11 +18,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 //import ChatPage from "./pages/ChatPage/ChatPage";
 //const socket = socketIO.connect("http://localhost:4000");
 import Home from "./pages/Home Page/Home/Home";
-import Sidebar from "./components/Sidebar/Sidebar";
 import RightSidebar from "./components/Right Sidebar/Sidebar";
 import ClassSidebar from "./components/My Class Sidebar/Sidebar";
 import Calendrier from "./pages/Calendrier/Calendrier";
 import Navbar from "./components/Right Sidebar/Sidebar";
+import Sidebar from "./pages/Sidebar/SideBar";
 function App() {
   return (
     <div className="App">
