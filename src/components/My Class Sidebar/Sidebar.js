@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./styles.module.css";
+import React from 'react';
+import styles from './styles.module.css';
 const ClassSidebar = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
@@ -8,7 +8,7 @@ const ClassSidebar = () => {
   };
   return (
     <div>
-      <nav className={`${styles.sidebar_c} ${sidebarOpen ? "" : styles.close}`}>
+      <nav className={`${styles.sidebar_c} ${sidebarOpen ? '' : styles.close}`}>
         <header>
           <div className={styles.image_text}>
             <span className={styles.image}>
@@ -26,10 +26,10 @@ const ClassSidebar = () => {
           <div className={styles.menu}>
             <ul className={styles.menu_links}>
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="">
                   <i
                     className={
-                      styles.i + " " + styles.icon + " " + "fa fa-dashboard"
+                      styles.i + ' ' + styles.icon + ' ' + 'fa fa-dashboard'
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
@@ -39,10 +39,10 @@ const ClassSidebar = () => {
               </li>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../AllCourses">
                   <i
                     className={
-                      styles.i + " " + styles.icon + " " + "fa fa-clipboard "
+                      styles.i + ' ' + styles.icon + ' ' + 'fa fa-clipboard '
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
@@ -52,10 +52,10 @@ const ClassSidebar = () => {
               </li>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../Homechat">
                   <i
                     className={
-                      styles.i + " " + styles.icon + " " + "fa fa-clipboard "
+                      styles.i + ' ' + styles.icon + ' ' + 'fa fa-comment '
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
@@ -65,10 +65,10 @@ const ClassSidebar = () => {
               </li>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../Notes">
                   <i
                     className={
-                      styles.i + " " + styles.icon + " " + "fa fa-clipboard "
+                      styles.i + ' ' + styles.icon + ' ' + 'fa fa-sticky-note '
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
@@ -78,10 +78,10 @@ const ClassSidebar = () => {
               </li>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../Calendrier">
                   <i
                     className={
-                      styles.i + " " + styles.icon + " " + "fa fa-calendar "
+                      styles.i + ' ' + styles.icon + ' ' + 'fa fa-calendar '
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
@@ -91,14 +91,14 @@ const ClassSidebar = () => {
               </li>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../Profile">
                   <i
                     className={
                       styles.i +
-                      " " +
+                      ' ' +
                       styles.icon +
-                      " " +
-                      "fa fa-graduation-cap "
+                      ' ' +
+                      'fa fa-graduation-cap '
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
@@ -108,10 +108,10 @@ const ClassSidebar = () => {
               </li>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../Profile">
                   <i
                     className={
-                      styles.i + " " + styles.icon + " " + "fa fa-cogs "
+                      styles.i + ' ' + styles.icon + ' ' + 'fa fa-cogs '
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
