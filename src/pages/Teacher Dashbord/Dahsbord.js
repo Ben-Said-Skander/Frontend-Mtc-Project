@@ -1,13 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import Sidebar from "../../components/Sidebar/SideBar";
+import Sidebar from "../../components/Teacher Sidebar/Sidebar";
 import HomeDash from "./HomeDash";
 import Chart from "./Chart";
 import Tableau from "./Tableau";
 import DoughnutChart from "./DoughnutChart";
 import ProgressCard from "./ProgressCard";
-export default function Dashboard() {
+export default function TeacherDashboard() {
   return (
     <div className="container-fluid bg-white min-vh-100">
       <div className="row">

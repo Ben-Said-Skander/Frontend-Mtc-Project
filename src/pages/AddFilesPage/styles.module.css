@@ -1,4 +1,5 @@
 .containerr {
+  margin-left: 25px;
   width: 100%;
   padding: 3%;
   background-position: center;
@@ -8,6 +9,7 @@
   justify-content: center;
 }
 .searchBar {
+  margin-left: 100px;
   width: 50%;
   max-width: 500px;
   background: #f0e3ce;
@@ -42,10 +44,12 @@
   cursor: pointer;
 }
 .valListe {
+  margin-left: 100px;
   text-align: left;
   padding-bottom: 50px;
 }
 .liFile {
+  margin-left: 100px;
   list-style-type: none;
   margin: 0.1em 15em;
   background-color: #fd841f;
@@ -60,10 +64,12 @@
   cursor: pointer;
 }
 .liFile div {
+  margin-left: 100px;
   background-color: #fd841f;
   flex: 1;
 }
 .liFile div p {
+  margin-left: 100px;
   background-color: #fd841f;
   margin-bottom: 1px;
 }

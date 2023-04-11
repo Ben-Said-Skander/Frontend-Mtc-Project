@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 import Note from "./Note";
-import Sidebar from "../../Sidebar/SideBar";
+import Sidebar from "../../Student Sidebar/SideBar";
 export default function Notes() {
   const [notes, setNotes] = useState([]);
   const [title, setTitle] = useState("");

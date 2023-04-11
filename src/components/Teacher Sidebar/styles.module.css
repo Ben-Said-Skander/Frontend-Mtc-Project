@@ -25,12 +25,12 @@
 
 body {
   min-height: 100vh;
-  background-color: var(--body-color);
+  background-color: #f8f8f8;
   transition: var(--tran-05);
 }
 
 ::selection {
-  background-color: var(--primary-color);
+  background-color: #f8f8f8;
   color: hsl(0, 29%, 92%);
 }
 

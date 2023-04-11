@@ -17,22 +17,19 @@ const Nav = () => {
         <Link to="/" className={styles.a}>
           {" "}
           <i className={styles.i + " " + "fa fa-user"}></i>
-          <span>profil</span>
+          <span>Profile</span>
         </Link>
         <Link to="/Password" className={styles.a}>
           <i className={styles.i + " " + "fa fa-key"}></i>
-          <span>mot de passe</span>
+          <span>Mot de passe</span>
         </Link>
-        <Link to="/Interests" className={styles.a}>
-          <i className={styles.i + " " + "fa fa-thumb-tack"}></i>
-          <span>intérêts</span>
-        </Link>
+      
 
         <div className={styles.logout}>
           {" "}
           <button className="logout_b">
             {" "}
-            déconnecter<i className={styles.i + " " + "fa fa-sign-out"}></i>
+            Déconnecter<i className={styles.i + " " + "fa fa-sign-out"}></i>
           </button>{" "}
         </div>
       </div>

@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./styles.module.css";
-import { SiGooglemeet } from "react-icons/si";
 const ClassSidebar = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
@@ -27,27 +26,14 @@ const ClassSidebar = () => {
           <div className={styles.menu}>
             <ul className={styles.menu_links}>
               <li className={styles.nav_link}>
-                <a className={styles.a} href="">
+                <a className={styles.a} href="../Homechat">
                   <i
                     className={
                       styles.i + " " + styles.icon + " " + "fa fa-dashboard"
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                    Tableau de bord
-                  </span>
-                </a>
-              </li>
-
-              <li className={styles.nav_link}>
-                <a className={styles.a} href="../AllCourses">
-                  <i
-                    className={
-                      styles.i + " " + styles.icon + " " + "fa fa-clipboard "
-                    }
-                  ></i>
-                  <span className={`${styles.text} ${styles.nav_text}`}>
-                    Les cours
+                    Profile
                   </span>
                 </a>
               </li>
@@ -66,14 +52,27 @@ const ClassSidebar = () => {
               </li>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="../Notes">
+                <a className={styles.a} href="../AddFiles">
+                  <i
+                    className={
+                      styles.i + " " + styles.icon + " " + "fa fa-clipboard "
+                    }
+                  ></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    Ajouter des cours
+                  </span>
+                </a>
+              </li>
+
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="../AddNotes">
                   <i
                     className={
                       styles.i + " " + styles.icon + " " + "fa fa-sticky-note "
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                    Notes
+                    Ajouter des notes
                   </span>
                 </a>
               </li>
@@ -87,39 +86,6 @@ const ClassSidebar = () => {
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
                     Horaires
-                  </span>
-                </a>
-              </li>
-
-              <li className={styles.nav_link}>
-                <a className={styles.a} href="../Profile">
-                  <i
-                    className={
-                      styles.i +
-                      " " +
-                      styles.icon +
-                      " " +
-                      "fa fa-graduation-cap "
-                    }
-                  ></i>
-                  <span className={`${styles.text} ${styles.nav_text}`}>
-                    Ma classe
-                  </span>
-                </a>
-              </li>
-
-              <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
-                  <i className={styles.i + " " + styles.icon + " "}>
-                    <SiGooglemeet />
-                  </i>
-                  <span className={`${styles.text} ${styles.nav_text}`}>
-                    <a
-                      href="https://meet.google.com/new?hs=180&authuser=0"
-                      style={{ color: "black" }}
-                    >
-                      Start a meeting
-                    </a>
                   </span>
                 </a>
               </li>

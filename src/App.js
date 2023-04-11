@@ -13,16 +13,18 @@ import Interests from './pages/Settings Pages/Pages/InterestsPage';
 import Notes from './pages/Add Notes Page/Notes/Notes';
 import AddNotes from './pages/Add Notes Page/AddNotes.js/AddNotes';
 import AboutUs from './pages/Home Page/About Us/AboutUs';
+import ClassSidebar  from './components/Teacher Sidebar/Sidebar';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+//import Dashboard from "./pages/My Class/Dashboard";
 //import Homechat from "./pages/ChatPage/Homechat";
 //import ChatPage from "./pages/ChatPage/ChatPage";
 //const socket = socketIO.connect("http://localhost:4000");
 import Home from "./pages/Home Page/Home/Home";
-import Sidebar from "./components/Sidebar/Sidebar";
+import TeacherDashboard from "./pages/Teacher Dashbord/Dahsbord";
 import RightSidebar from "./components/Right Sidebar/Sidebar";
-import ClassSidebar from "./components/My Class Sidebar/Sidebar";
+
 import Calendrier from "./pages/Calendrier/Calendrier";
-import Navbar from "./components/Right Sidebar/Sidebar";
+
 function App() {
   return (
     <div className="body">
@@ -38,6 +40,8 @@ function App() {
           <Route path="/Interests" element={<Interests />} />
           <Route path="/AboutUs" element={<AboutUs />} />
 
+
+
           <Route path="/Dashbord" element={<Dashbord />} />
           <Route path="/AllCourses" element={<AllCourses />} />
           <Route path="/CoursesList" element={<CoursesList />} />
@@ -46,6 +50,8 @@ function App() {
           <Route path="/AddNotes" element={<AddNotes />} />
 
           <Route path="/Calendrier" element={<Calendrier />} />
+
+          <Route path="/TeacherDashboard" element={<TeacherDashboard />} />
 
           {/* <Route path="/Sidebar" element={<Sidebar />} /> */}
           <Route path="/RightSidebar" element={<RightSidebar />} />

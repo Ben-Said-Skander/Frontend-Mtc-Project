@@ -2,20 +2,20 @@ import React from "react";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import Sidebar from "../../../pages/Sidebar/SideBar";
+import Sidebar from "../../Student Sidebar/SideBar";
 import { FaArrowLeft } from "react-icons/fa";
 export default function AddNotes() {
-  const [noteText, setNoteText] = useState('');
+  const [noteText, setNoteText] = useState("");
   const handClick = () => {
     let data = {
       noteText: noteText,
     };
-    let noteId = JSON.parse(localStorage.getItem('noteId') || '1');
+    let noteId = JSON.parse(localStorage.getItem("noteId") || "1");
     data.id = noteId;
-    let notes = JSON.parse(localStorage.getItem('notes') || '[]');
+    let notes = JSON.parse(localStorage.getItem("notes") || "[]");
     notes.push(data);
-    localStorage.setItem('notes', JSON.stringify(notes));
-    localStorage.setItem('noteId', JSON.stringify(noteId + 1));
+    localStorage.setItem("notes", JSON.stringify(notes));
+    localStorage.setItem("noteId", JSON.stringify(noteId + 1));
   };
 
   const changeNote = (event) => {
@@ -51,7 +51,7 @@ export default function AddNotes() {
             </button>
           </Link>
         </div>
-      </div>{' '}
+      </div>{" "}
     </div>
   );
 }

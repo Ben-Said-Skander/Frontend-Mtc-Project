@@ -5,7 +5,7 @@ import Search from "../Search Component/Search";
 import Profs from "../../Instructors Page/Instructor List/InstructorList";
 import { Link } from "react-router-dom";
 import style from "./styles.module.css";
-import Sidebar from "../../Sidebar/SideBar";
+import Sidebar from "../../Student Sidebar/SideBar";
 export default function AllCourses() {
   const [profs, setProfs] = useState([
     {

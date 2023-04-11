@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import style from "./styles.module.css";
-import Sidebar from "../Sidebar/SideBar";
+import Sidebar from "../Student Sidebar/SideBar";
 
 const Calendrier = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -71,7 +71,7 @@ const Calendrier = () => {
             }
           }}
         />
-        <button onClick={addComment}>Ajouter un commentaire</button>
+        <button onClick={addComment}className={style.addcmt}>Ajouter un commentaire</button>
       </div>
     </div>
   );

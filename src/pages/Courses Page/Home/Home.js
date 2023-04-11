@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import Search from "../Search Component/Search";
 import { Link } from "react-router-dom";
 import style from "./styles.module.css";
-import Sidebar from "../../Sidebar/SideBar";
+import Sidebar from "../../Student Sidebar/SideBar";
 const Dashbord = () => {
   const [courses, setCourses] = useState([
     {
