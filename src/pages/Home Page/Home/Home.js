@@ -53,14 +53,18 @@ export default function Home() {
                       <ul>
                         
                         <li>
+                        <Link to="/AboutUs">
                           <a href="contact.html">Nos Cours </a>
-                        </li>
-                        <li>
-                          <a href="contact.html">Contacter nous </a>
+                          </Link>
                         </li>
                         <li>
                         <Link to="/AboutUs">
-                          <a href="contact.html">A propos de nous </a>
+                          <a href="contact.html">Contacter nous </a>
+                          </Link>
+                        </li>
+                        <li>
+                        <Link to="/AboutUs">
+                          <a href="AboutUs.js">A propos de nous </a>
                           </Link>
                         </li>
                       </ul>
@@ -117,10 +121,7 @@ export default function Home() {
                     <div className="col-xl-6 col-lg-6 col-md-9">
                       <div className="hero-content mt-80">
                         <div className="hero-slider-caption">
-                          <span data-animation="fadeInUp" data-delay=".5s">
-                            <i className="fal fa-ellipsis-h" />
-                            Bienvenue à notre platforme
-                          </span>
+                         
                           <h2
                             className="mb-45"
                             data-animation="fadeInUp"
@@ -145,10 +146,10 @@ export default function Home() {
               <div className="row">
                 <div className="col-xl-6 col-lg-6 offset-lg-3 offset-xl-3">
                   <div className="section-title text-center mb-60">
-                    <span>
-                      
-                     
+                    <span> 
                     </span>
+                    
+                    
                     <span>
                              
                      
@@ -184,7 +185,7 @@ export default function Home() {
                       <h4>
                         <a href="courses-details.html">Business </a>
                       </h4>
-                      <span>Un cours complet comprenant les fondamentaux des affaires, le leadership, le marketing</span>
+                      <span>Un cours complet comprenant les fondamentaux des affaires, le leadership</span>
                     </div>
                   </div>
                 </div>
@@ -216,7 +217,7 @@ export default function Home() {
                           Productivité Bureautique
                         </a>
                       </h4>
-                      <span>Gagnez du temps, améliorez la productivité</span>
+                      <span>Gagnez du temps, améliorez la productivité et la performance</span>
                     </div>
                   </div>
                 </div>
@@ -250,7 +251,7 @@ export default function Home() {
                       </h4>
                       <span>
                         Permettre à tous de vivre en bonne santé et promouvoir
-                        le bien-être de tous à tout âge{" "}
+                        le bien-être 
                       </span>
                     </div>
                   </div>
