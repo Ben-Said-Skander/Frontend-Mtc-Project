@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./styles.module.css";
+import React from 'react';
+import styles from './styles.module.css';
 const Footer = () => {
   return (
     <div className={styles.body}>
@@ -22,7 +22,7 @@ const Footer = () => {
               <p className={styles.p}>adresse e-mail</p>
               <span className={styles.span}>
                 <a className={styles.a} href>
-                  {" "}
+                  {' '}
                   us@example.com
                 </a>
               </span>
@@ -68,19 +68,19 @@ const Footer = () => {
           <button className={styles.button}>S'abonner </button>
           <p className={styles.p}></p>
           <a className={styles.a} href>
-            {" "}
+            {' '}
             <i className={styles.i} class="fa fa-facebook fa-2x"></i>
           </a>
           <a className={styles.p} href>
-            {" "}
+            {' '}
             <i className={styles.i} class="fa fa-twitter fa-2x"></i>
           </a>
           <a className={styles.p} href>
-            {" "}
+            {' '}
             <i className={styles.i} class="fa fa-youtube-play fa-2x"></i>
           </a>
           <a className={styles.p} href>
-            {" "}
+            {' '}
             <i className={styles.i} class="fa fa-instagram fa-2x"></i>
           </a>
         </div>
