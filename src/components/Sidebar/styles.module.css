@@ -151,7 +151,7 @@ body {
 .sidebar_c ul {
   padding-left: 0;
 }
-.sidebar_c li a {
+.a {
   list-style: none;
   height: 100%;
   background-color: transparent;
@@ -163,6 +163,10 @@ body {
   border-bottom: 1px solid #ddd;
   text-decoration: none;
   transition: var(--tran-03);
+}
+
+.a:hover {
+  background-color: var(--primary-color);
 }
 
 .sidebar_c li a:hover {

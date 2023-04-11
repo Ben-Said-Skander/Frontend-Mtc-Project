@@ -132,7 +132,7 @@ form .user_details {
   margin-bottom: 5px;
 }
 
-input {
+.input {
   height: 45px;
   width: 80%;
   outline: none;
@@ -144,8 +144,8 @@ input {
   transition: all 0.3s ease;
 }
 
-input:focus,
-input:valid {
+.input:focus,
+.input:valid {
   border-color: #ff9900;
 }
 

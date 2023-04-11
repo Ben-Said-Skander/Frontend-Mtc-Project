@@ -18,11 +18,12 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 //import ChatPage from "./pages/ChatPage/ChatPage";
 //const socket = socketIO.connect("http://localhost:4000");
 import Home from "./pages/Home Page/Home/Home";
-import Sidebar from "./components/Sidebar/Sidebar";
+import Sidebar from "./components/Sidebar/SideBar";
 import RightSidebar from "./components/Right Sidebar/Sidebar";
 import ClassSidebar from "./components/My Class Sidebar/Sidebar";
 import Calendrier from "./pages/Calendrier/Calendrier";
 import Navbar from "./components/Right Sidebar/Sidebar";
+import Dashboard from "./pages/DashboardPage/Dashboard";
 function App() {
   return (
     <div className="App">
@@ -37,7 +38,7 @@ function App() {
           <Route path="/Password" element={<Password />} />
           <Route path="/Interests" element={<Interests />} />
           <Route path="/AboutUs" element={<AboutUs />} />
-
+          <Route path="/Dashboardd" element={<Dashboard />} />
           <Route path="/Dashbord" element={<Dashbord />} />
           <Route path="/AllCourses" element={<AllCourses />} />
           <Route path="/CoursesList" element={<CoursesList />} />

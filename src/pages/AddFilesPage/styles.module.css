@@ -72,8 +72,11 @@
   font-size: 16px;
   border-radius: 50px;
   box-shadow: 5px 5px 10 px black;
-  width: 350px;
+  width: 390px;
   outline: none;
+  padding-top: 40px;
+  color: black;
+  margin-left: 320px;
 }
 ::-webkit-file-upload-button{
   color: white;
@@ -99,8 +102,9 @@
   border-radius: 20px;
   outline: none;
   margin-top: 300px;
+  margin-left: 500px;
 }
-h3{
+.h3{
   padding-top: 50px;
   text-align: left;
   margin-left: 380px;

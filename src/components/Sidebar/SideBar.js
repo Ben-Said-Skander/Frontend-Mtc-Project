@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.css";
+import {SiGooglemeet} from "react-icons/si";
 const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
@@ -77,6 +78,18 @@ const Sidebar = () => {
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
                     Paramètres
+                  </span>
+                </a>
+              </li>
+
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="#">
+                <i
+                    className={
+                      styles.i + " " + styles.icon + " " }
+                  ><SiGooglemeet/></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    <a href="https://meet.google.com/new?hs=180&authuser=0" style={{color:"black"}}>Start a meeting</a>
                   </span>
                 </a>
               </li>
