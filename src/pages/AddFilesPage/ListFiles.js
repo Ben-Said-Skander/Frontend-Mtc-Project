@@ -12,7 +12,7 @@ export default function ListFiles() {
   }, []);
 
   return (
-    <div>
+    <div className={style.body}>
       <Sidebar />
       <div className={style.containerr}>
         <form action="#" className={style.searchBar}>

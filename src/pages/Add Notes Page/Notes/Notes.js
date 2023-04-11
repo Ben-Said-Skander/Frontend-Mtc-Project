@@ -36,7 +36,7 @@ export default function Notes() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.note_container}>
       <Sidebar />
       <div className={styles.note_container}>
         <h1 className={styles.head}>Note and Reminders</h1>

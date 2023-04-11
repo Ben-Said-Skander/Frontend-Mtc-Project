@@ -34,7 +34,7 @@ export default function AllCourses() {
     },
     {
       id: nanoid(),
-      name: "Mohamed",
+      name: "Salma",
       age: "24",
       education: "BAC+2",
       experience: 1,

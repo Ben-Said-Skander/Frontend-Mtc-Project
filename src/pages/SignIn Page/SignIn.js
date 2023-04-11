@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 import style from "./style.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FaFacebookF, FaGooglePlusG, FaLinkedinIn } from "react-icons/fa";
 export default function SignIn() {
-
   const navigate = useNavigate();
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
@@ -34,37 +33,59 @@ export default function SignIn() {
     setMessage(message);
   };
   return (
-    <div className={style.sss} >
+    <div className={style.sss}>
       <div className={style.containerr} id="container">
         <div className={style.signInContainer}>
           <form className={style.form1} action="#">
-            <h1 className={style.h1Sign}>s'identifier</h1>
+            <h1 className={style.h1Sign}>S'identifier</h1>
             <div className={style.socialContainerr}>
-              <a href="#" className={style.social}><FaFacebookF /></a>
-              <a href="#" className={style.social}><FaGooglePlusG /></a>
-              <a href="#" className={style.social}><FaLinkedinIn /></a>
+              <a href="#" className={style.social}>
+                <FaFacebookF />
+              </a>
+              <a href="#" className={style.social}>
+                <FaGooglePlusG />
+              </a>
+              <a href="#" className={style.social}>
+                <FaLinkedinIn />
+              </a>
             </div>
             <span className={style.spanSign}>ou utilisez votre compte</span>
-            <input className={style.inputSign} type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)}
+            <input
+              className={style.inputSign}
+              type="email"
+              placeholder="E-mail"
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <input className={style.inputSign} type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}
+            <input
+              className={style.inputSign}
+              type="password"
+              placeholder="Mot de passe"
+              onChange={(e) => setPassword(e.target.value)}
             />
             <a href="#">Mot de passe oublié?</a>
-            <button className={style.buttonSign} onClick={handleClick}>s'identifier</button>
+            <button className={style.buttonSign} onClick={handleClick}>
+              s'identifier
+            </button>
           </form>
         </div>
         <div className={style.overlayContainer}>
           <div className={style.overlay}>
             <div className={style.overlayRight}>
-              <form action='/SignUp'>
-                <h1 className={style.h1Sign}>Salut l'ami!</h1>
-                <p>Entrez vos données personnelles et commencez votre voyage avec nous</p>
-                <button className={style.buttonGhost} type='submit' id="signUp" > <Link to="/Signup">Sign Up</Link></button>
+              <form action="/SignUp">
+                <h1 className={style.h1Sign}>Salutations, cher participant</h1>
+                <p>
+                  Entrez vos données personnelles et commencez votre voyage avec
+                  nous
+                </p>
+                <button className={style.buttonGhost} type="submit" id="signUp">
+                  {" "}
+                  <Link to="/Signup">Sign Up</Link>
+                </button>
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }

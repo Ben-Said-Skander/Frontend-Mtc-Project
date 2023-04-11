@@ -1,8 +1,9 @@
-/* changes */
-/* .App { */
-/* text-align: center; */
-/* } */
 
+.body{
+  
+  background-color: #f8f8f8;
+  background: #f8f8f8;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -15,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f8f8f8;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

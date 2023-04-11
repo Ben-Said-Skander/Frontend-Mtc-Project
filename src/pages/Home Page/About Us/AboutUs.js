@@ -1,6 +1,6 @@
-import React from 'react';
-import Footer from './Footer';
-import styles from './styles.module.css';
+import React from "react";
+import Footer from "./Footer";
+import styles from "./styles.module.css";
 const AboutUs = () => {
   return (
     <div>
@@ -15,9 +15,9 @@ const AboutUs = () => {
         <div class={styles.text_container}>
           <h1 className={styles.h1}>Qui sommes nous</h1>
           <p className={styles.p}>
-            {' '}
+            {" "}
             <h4 className={styles.h4}>
-              {' '}
+              {" "}
               est un site éducatif multidisciplinaire, l'endroit où vous pouvez
               découvrir et apprendre à propos de toutes ce qui vous intéressent.
             </h4>
@@ -42,24 +42,18 @@ const AboutUs = () => {
   );
 };
 
-
-
 export default AboutUs;
 /*
 import "./App.css";
 import AddFiles from "./pages/AddFiles Page/AddFiles";
 import ListFiles from "./pages/AddFiles Page/ListFiles";
-
 import AddNotes from "./pages/Add Notes Page/AddNotes.js/AddNotes";
 import Notes from "./pages/Add Notes Page/Notes/Notes";
-
 import SignUp from "./pages/SignUp Page/SignUp";
 import SignIn from "./pages/SignIn Page/SignIn";
-
 import Profile from "./pages/Settings Pages/Pages/Profile";
 import Password from "./pages/Settings Pages/Pages/PasswordPage";
 import Interests from "./pages/Settings Pages/Pages/InterestsPage";
-
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home Page/Home/Home";
 import Dashbord from "./pages/Courses Page/Home/Home";
@@ -69,7 +63,6 @@ import Navbar from "./components/Right Sidebar/Sidebar";
 import HomeChat from "./pages/ChatPage/Homechat";
 import CoursesList from "./pages/Courses Page/CoursesList/CoursesList";
 import AboutUs from "./pages/Home Page/About Us/AboutUs";
-
 function App() {
   return (
     <div className="App">
@@ -78,24 +71,17 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/AddFiles" element={<AddFiles />} />
           <Route path="/ListFiles" element={<ListFiles />} />
-
           <Route path="/AddNotes" element={<AddNotes />} />
           <Route path="/Notes" element={<Notes />} />
-
           <Route path="/Chat" element={<HomeChat />} />
-
           <Route path="/Sidebar" element={<Sidebar />} />
           <Route path="/Navbar" element={<Navbar />} />
-
           <Route path="/AboutUs" element={<AboutUs />} />
-
           <Route path="/Dashbord" element={<Dashbord />} />
           <Route path="/AllCourses" element={<AllCourses />} />
           <Route path="/CoursesList" element={<CoursesList />} />
-
           <Route path="/Signup" element={<SignUp />} />
           <Route path="/Signin" element={<SignIn />} />
-
           <Route path="/Settings/Profile" element={<Profile />} />
           <Route path="/Settings/Password" element={<Password />} />
           <Route path="/Settings/Interests" element={<Interests />} />
@@ -104,5 +90,4 @@ function App() {
     </div>
   );
 }
-
 export default App; */

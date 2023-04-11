@@ -66,7 +66,7 @@ export default function AddFiles() {
     <div>
       <Sidebar />
       <form>
-        <h3>Télécharger Fichiers</h3>
+        <h3 className={style.h3}>Télécharger Fichiers</h3>
         <input
           type="file"
           className={style.boxUpload}
@@ -92,7 +92,6 @@ export default function AddFiles() {
           )}
           {!viewPdfFile && <></>}
         </Worker>
-
       </div>
     </div>
   );

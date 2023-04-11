@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
-import { Link } from "react-router-dom";
-const Sidebar = () => {
+import { SiGooglemeet } from "react-icons/si";
+const ClassSidebar = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false);
 
   const toggleSidebar = () => {
@@ -25,61 +25,74 @@ const Sidebar = () => {
 
         <div className={styles.menu_bar}>
           <div className={styles.menu}>
-            <li className={styles.search_box}>
-              <i
-                className={styles.i + " " + styles.icon + " " + "fa fa-search"}
-              ></i>
-              <input
-                className={styles.input}
-                type="text"
-                placeholder="       search"
-              />
-            </li>
-
             <ul className={styles.menu_links}>
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="">
                   <i
                     className={
                       styles.i + " " + styles.icon + " " + "fa fa-dashboard"
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                    Dashboard
+                    Tableau de bord
                   </span>
                 </a>
               </li>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../AllCourses">
                   <i
                     className={
                       styles.i + " " + styles.icon + " " + "fa fa-clipboard "
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                    All Courses
+                    Les cours
                   </span>
                 </a>
               </li>
-              <Link to="/Calendrier">
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../Homechat">
+                  <i
+                    className={
+                      styles.i + " " + styles.icon + " " + "fa fa-comment "
+                    }
+                  ></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    Chat
+                  </span>
+                </a>
+              </li>
+
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="../Notes">
+                  <i
+                    className={
+                      styles.i + " " + styles.icon + " " + "fa fa-sticky-note "
+                    }
+                  ></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    Notes
+                  </span>
+                </a>
+              </li>
+
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="../Calendrier">
                   <i
                     className={
                       styles.i + " " + styles.icon + " " + "fa fa-calendar "
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                  Calendrier
+                    Horaires
                   </span>
                 </a>
               </li>
-              </Link>
 
               <li className={styles.nav_link}>
-                <a className={styles.a} href="#">
+                <a className={styles.a} href="../Profile">
                   <i
                     className={
                       styles.i +
@@ -90,20 +103,36 @@ const Sidebar = () => {
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                    My Class
+                    Ma classe
                   </span>
                 </a>
               </li>
 
               <li className={styles.nav_link}>
                 <a className={styles.a} href="#">
+                  <i className={styles.i + " " + styles.icon + " "}>
+                    <SiGooglemeet />
+                  </i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    <a
+                      href="https://meet.google.com/new?hs=180&authuser=0"
+                      style={{ color: "black" }}
+                    >
+                      Start a meeting
+                    </a>
+                  </span>
+                </a>
+              </li>
+
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="../Profile">
                   <i
                     className={
                       styles.i + " " + styles.icon + " " + "fa fa-cogs "
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                    Settings
+                    Paramètres
                   </span>
                 </a>
               </li>
@@ -115,4 +144,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default ClassSidebar;

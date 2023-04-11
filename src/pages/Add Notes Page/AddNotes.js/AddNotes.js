@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
-import ClassSidebar from "../../../components/My Class Sidebar/Sidebar";
+import Sidebar from "../../Sidebar/SideBar";
 import { FaArrowLeft } from "react-icons/fa";
 export default function AddNotes() {
   const [noteText, setNoteText] = useState("");
@@ -24,7 +24,7 @@ export default function AddNotes() {
 
   return (
     <div>
-      <ClassSidebar />
+      <Sidebar />
       <div className={styles.note_container}>
         <div className={styles.arrow_container}>
           <Link to="/Notes">

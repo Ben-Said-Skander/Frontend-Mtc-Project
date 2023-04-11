@@ -83,9 +83,9 @@ a {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
-  width: 1500px;
+  width: 1550px;
   max-width: 100%;
-  min-height: 660px;
+  min-height: 810px;
 }
 
 .signInContainer {
@@ -105,7 +105,7 @@ a {
 .signUpContainer {
   position: absolute;
   top: 0;
-  height: 100%;
+  height: 95%;
   z-index: 2;
   right: 0;
 }
@@ -193,4 +193,107 @@ a {
   margin: 0 5px;
   height: 40px;
   width: 40px;
+}
+.radio {
+  background-color: white;
+}
+
+/* interst setting style */
+
+.radio_section {
+  display: flex;
+  align-items: initial;
+  justify-content: center;
+  height: 70vh;
+}
+.radio_list {
+  margin-top: 100px;
+  width: calc(40% / 1 - 10px);
+  justify-content: space-between;
+  margin: 40px 0px 0px 20px;
+}
+.radio_item [type="radio"] {
+  display: none;
+}
+
+.radio_item + .radio_item {
+  margin-top: 15px;
+}
+.radio_item label {
+  display: block;
+  padding: 15px 60px;
+  background: whitesmoke;
+  border-radius: 25px;
+  cursor: pointer;
+  min-height: 30px;
+  font-size: 18px;
+  font-weight: 400;
+
+  white-space: nowrap;
+  position: relative;
+}
+.radio_item label:after,
+.radio_item label:before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.radio_item label:after {
+  height: 20px;
+  width: 20px;
+  border: 2px solid #730c9b;
+  left: 20px;
+  top: calc(50% - 12px);
+}
+.radio_item label:before {
+  background: #730c9b;
+  height: 10px;
+  width: 10px;
+  left: 27px;
+  top: calc(50% - 5px);
+  transform: scale(10);
+  transition: 0.4s ease-in-out 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+.radio_item [type="radio"]:checked ~ label {
+  border-color: #524eee;
+}
+
+.radio_item [type="radio"]:checked ~ label:before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.radio_button {
+  height: 50px;
+  padding-left: 45%;
+}
+.radio_button input {
+  height: 100%;
+  width: 20%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  justify-content: space-between;
+  margin: 0 15px;
+  position: static;
+}
+.radio_button input:hover {
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+.Quetion {
+  padding-top: 30px;
+
+  font-size: 25px;
+  font-weight: 500;
+  color: #cc5d0d;
 }

@@ -22,7 +22,23 @@
   --tran-04: all 0.3s ease;
   --tran-05: all 0.3s ease;
 }
+.a {
+  list-style: none;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+  transition: var(--tran-03);
+}
 
+.a:hover {
+  background-color: var(--primary-color);
+}
 body {
   min-height: 100vh;
   background-color: var(--body-color);
@@ -148,8 +164,8 @@ body {
   font-weight: 500;
   transition: var(--tran-05);
 }
-.sidebar_c ul{
-  padding-left:0;
+.sidebar_c ul {
+  padding-left: 0;
 }
 .sidebar_c li a {
   list-style: none;

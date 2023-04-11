@@ -1,5 +1,5 @@
 .course {
-  background-color: rgb(125, 177, 228);
+  background-color: #dcdcdc;
   border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
@@ -8,18 +8,21 @@
   justify-content: space-between;
   white-space: pre-wrap;
 }
+.body {
+  margin-left: 20%;
+}
 .coursImg {
   border-radius: 8px;
   width: 90%;
 }
-.course.delete {
+.course_delete {
   float: right;
   width: 20px;
 }
 
-.delete.icon {
+.delete_icon {
   cursor: pointer;
-  color: darkmagenta;
+  color: #daa520;
   font-size: large;
 }
 .name {
