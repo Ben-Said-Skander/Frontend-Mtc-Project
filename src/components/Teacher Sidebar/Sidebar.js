@@ -12,7 +12,7 @@ const ClassSidebar = () => {
         <header>
           <div className={styles.image_text}>
             <span className={styles.image}>
-              <img className={styles.img} src="./logo-social.png" alt="" />
+              <img className={styles.img} src="./mtc.png" alt="" />
             </span>
           </div>
 

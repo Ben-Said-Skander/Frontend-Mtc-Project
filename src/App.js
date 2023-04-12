@@ -2,7 +2,7 @@ import './App.css';
 import { Socket } from 'socket.io-client';
 import AddFiles from './pages/AddFilesPage/AddFiles';
 import ListFiles from './pages/AddFilesPage/ListFiles';
-import Dashbord from './pages/Courses Page/Home/Home';
+import HomeCourses from './pages/Courses Page/Home/Home';
 import AllCourses from './pages/Courses Page/AllCourses/AllCourses';
 import CoursesList from './pages/Courses Page/CoursesList/CoursesList';
 import SignUp from './pages/SignUp Page/SignUp';
@@ -31,7 +31,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/dashbord" element={<Dashbord />} />
+
           <Route path="/Signup" element={<SignUp />} />
           <Route path="/Signin" element={<SignIn />} />
 
@@ -42,7 +42,7 @@ function App() {
 
 
 
-          <Route path="/Dashbord" element={<Dashbord />} />
+          <Route path="/Dashbord" element={<HomeCourses />} />
           <Route path="/AllCourses" element={<AllCourses />} />
           <Route path="/CoursesList" element={<CoursesList />} />
 

@@ -1,8 +1,9 @@
 .container {
+  margin-left: 150px;
   max-width: 960px;
   margin-right: auto;
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 280px;
   min-height: 100vh;
 }
 
@@ -19,11 +20,12 @@
 
 .cours {
   font-family: "Hanalei Fill", cursive;
-  color: #fa8072;
+  color:#131335;
   margin-top: 20px;
 }
 
 .see {
+  padding-top: 70px;
   font-family: "Goudy Old Style";
-  color: #8b0000;
+  color: #b71b0a;
 }

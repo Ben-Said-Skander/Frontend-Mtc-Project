@@ -10,8 +10,8 @@
 :root {
   /* ===== Colors ===== */
   --body-color: #e4e9f7;
-  --sidebar-color: linear-gradient(0deg, #c624ff 0%, #2d63fc 100%) !important ;
-  --primary-color: #6b08a9;
+  --sidebar-color: linear-gradient(to top left, #ff9900, #b71b0a) !important ;
+  --primary-color: #b71b0a;
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
   --text-color: #080808;
@@ -22,31 +22,15 @@
   --tran-04: all 0.3s ease;
   --tran-05: all 0.3s ease;
 }
-.a {
-  list-style: none;
-  height: 100%;
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  border-radius: 6px;
-  border-bottom: 1px solid #ddd;
-  text-decoration: none;
-  transition: var(--tran-03);
-}
 
-.a:hover {
-  background-color: var(--primary-color);
-}
 body {
   min-height: 100vh;
-  background-color: var(--body-color);
+  background-color: #f8f8f8;
   transition: var(--tran-05);
 }
 
 ::selection {
-  background-color: var(--primary-color);
+  background-color: #f8f8f8;
   color: hsl(0, 29%, 92%);
 }
 

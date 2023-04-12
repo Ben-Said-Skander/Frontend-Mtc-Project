@@ -21,10 +21,12 @@
   margin-top: 15px;
 }
 .p b{
+
   color:  	#A52A2A;
   font-size: 17px;
 }
 .p {
+  padding-top: 15px;
   color: rgb(2, 4, 31);
   font-size: 15px;
 }

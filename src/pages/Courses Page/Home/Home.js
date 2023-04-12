@@ -6,23 +6,27 @@ import Search from "../Search Component/Search";
 import { Link } from "react-router-dom";
 import style from "./styles.module.css";
 import Sidebar from "../../Student Sidebar/SideBar";
-const Dashbord = () => {
+const HomeCourses = () => {
   const [courses, setCourses] = useState([
     {
       id: nanoid(),
       name: "JAVA",
+      imageURL: "java.png",
     },
     {
       id: nanoid(),
       name: "Python",
+      imageURL: "Python.png",
     },
     {
       id: nanoid(),
       name: "Math",
+      imageURL: "math.webp",
     },
     {
       id: nanoid(),
       name: "Adobe",
+      imageURL: "adobe.jpg",
     },
   ]);
 
@@ -61,21 +65,17 @@ const Dashbord = () => {
   return (
     <div>
       <Sidebar />
-      <div className={`${style.darkMode && "dark-mode"}`}>
+      <div className={`${style.darkMode && style.dark_mode}`}>
         <div className={style.container}>
           <Header handleToggleDarkMode={setDarkMode} />
           <br></br>
-          <Search handleSearchCourse={setSearchName} />
+          <Search handleSearchCourse={setSearchName} className={style.search} />
 
-          <CoursesList
-            courses={courses.filter((course) =>
-              course.name.toLowerCase().includes(searchName)
-            )}
-            handleAddCourse={addCourse}
-            handleDeleteCourse={deleteCourse}
-          />
+      
 
           <h1 className={style.all}>All Courses</h1>
+          <br></br>
+
           <Link to="/AllCourses">
             <button className={style.btn}>See All Courses</button>
           </Link>
@@ -96,4 +96,4 @@ const Dashbord = () => {
   );
 };
 
-export default Dashbord;
+export default HomeCourses;

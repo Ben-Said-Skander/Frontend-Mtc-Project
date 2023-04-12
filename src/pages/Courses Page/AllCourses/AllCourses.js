@@ -57,7 +57,7 @@ export default function AllCourses() {
         <div className={style.container}>
           <Header handleToggleDarkMode={setDarkMode} />
           <br></br>
-          <Search handleSearchCourse={setSearchName} />
+          <Search handleSearchCourse={setSearchName} className={style.searchh} />
           <h1 className={style.see}>All Courses</h1>
 
           <h2 className={style.cours}>Math</h2>
@@ -79,9 +79,7 @@ export default function AllCourses() {
             )}
           />
           <br></br>
-          <Link to="../">
-            <button className={style.btn}>Previous</button>
-          </Link>
+        
         </div>
       </div>{" "}
     </div>

@@ -1,17 +1,18 @@
 .header {
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .greeting {
-  margin-left: 150px;
+  margin-bottom: 130px;
+  margin-top: 50px;
   font-family: Book Antiqua;
-  color: #b8860b;
+  color: #080039;
   font-size: large;
 }
 .wel {
-  margin-left: 150px;
-  color: #cd5c5c;
+  margin-top: 35px;
+ 
+  color: #b71b0a;
   font-family: "Rockwell Extra Bold";
 }
