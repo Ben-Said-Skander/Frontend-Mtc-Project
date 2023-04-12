@@ -2,16 +2,14 @@
   clip-path: ellipse(45% 50%);
   height: 100px;
   width: 100px;
-  
-  
 }
-.body{
+.body {
   margin-left: 15%;
 }
 
 .container {
-  background-color:  	#DCDCDC;
-  border-radius: 10px ;
+  background-color: #dcdcdc;
+  border-radius: 10px;
   padding: 1rem;
   min-height: 170px;
   display: flex;
@@ -20,9 +18,8 @@
   white-space: pre-wrap;
   margin-top: 15px;
 }
-.p b{
-
-  color:  	#A52A2A;
+.p b {
+  color: #a52a2a;
   font-size: 17px;
 }
 .p {
@@ -30,7 +27,13 @@
   color: rgb(2, 4, 31);
   font-size: 15px;
 }
-.btn{
-  width: 80px;
-  margin-left: 98px;
+.btnAccept{
+  width: 85px;
+  margin-left: 45px;
+  background-color: green;
+}
+.btnRefuse{
+  width: 85px;
+  margin-left: 30px;
+  background-color: green;
 }

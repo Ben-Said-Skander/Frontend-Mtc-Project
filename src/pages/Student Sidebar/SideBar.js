@@ -26,6 +26,23 @@ const ClassSidebar = () => {
         <div className={styles.menu_bar}>
           <div className={styles.menu}>
             <ul className={styles.menu_links}>
+
+            <li className={styles.nav_link}>
+                <a className={styles.a} href="../ListFiles">
+                  <i
+                    className={
+                      styles.i +
+                      " " +
+                      styles.icon +
+                      " " +
+                      "fa fa-graduation-cap "
+                    }
+                  ></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    Ma Classe
+                  </span>
+                </a>
+              </li>
              
 
               <li className={styles.nav_link}>
@@ -61,7 +78,7 @@ const ClassSidebar = () => {
                       " " +
                       styles.icon +
                       " " +
-                      "fa fa-graduation-cap "
+                      "fa fa-clipboard "
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>

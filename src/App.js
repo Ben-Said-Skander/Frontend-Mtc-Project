@@ -13,7 +13,7 @@ import Interests from './pages/Settings Pages/Pages/InterestsPage';
 import Notes from './pages/Add Notes Page/Notes/Notes';
 import AddNotes from './pages/Add Notes Page/AddNotes.js/AddNotes';
 import AboutUs from './pages/Home Page/About Us/AboutUs';
-import ClassSidebar  from './components/Teacher Sidebar/Sidebar';
+import TeacherSidebar  from './components/Teacher Sidebar/Sidebar';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 //import Dashboard from "./pages/My Class/Dashboard";
 //import Homechat from "./pages/ChatPage/Homechat";
@@ -22,6 +22,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from "./pages/Home Page/Home/Home";
 import TeacherDashboard from "./pages/Teacher Dashbord/Dahsbord";
 import RightSidebar from "./components/Right Sidebar/Sidebar";
+import Demands from "./pages/Teacher Student connection/All Demands/demands"
 
 import Calendrier from "./pages/Calendrier/Calendrier";
 
@@ -52,10 +53,11 @@ function App() {
           <Route path="/Calendrier" element={<Calendrier />} />
 
           <Route path="/TeacherDashboard" element={<TeacherDashboard />} />
+          <Route path="/Demands" element={<Demands />} />
 
           {/* <Route path="/Sidebar" element={<Sidebar />} /> */}
           <Route path="/RightSidebar" element={<RightSidebar />} />
-          <Route path="/ClassSidebar" element={<ClassSidebar />} />
+          <Route path="/TeacherSidebar" element={<TeacherSidebar />} />
 
           <Route path="/AddFiles" element={<AddFiles />} />
           <Route path="/ListFiles" element={<ListFiles />} />

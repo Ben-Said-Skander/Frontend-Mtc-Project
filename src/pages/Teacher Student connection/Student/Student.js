@@ -1,5 +1,5 @@
 import style from "./styles.module.css";
-const Prof = ({ id, name, age, education, experience, contact }) => {
+const Student = ({ id, name, age, education, contact }) => {
   return (
     <div className={style.container}>
       <div className={style.prof}>
@@ -20,15 +20,18 @@ const Prof = ({ id, name, age, education, experience, contact }) => {
           {age}
           <br></br>
           <b>Education : </b> {education} <br></br>
-          <b>Experience : </b>
-          {experience} <br></br>
+         
           <b>Contacte : </b>
           {contact} <br></br>
         </p>
-        <button className={style.btn}>Ajouter</button>
+
+        <div>
+          <button className={style.btnAccept}>Accepter</button>
+          <button className={style.btnRefuse}>Refuser</button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Prof;
+export default Student;
