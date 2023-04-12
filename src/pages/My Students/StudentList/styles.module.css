@@ -1,0 +1,31 @@
+.container {
+  margin-left: 150px;
+  max-width: 960px;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 280px;
+  min-height: 100vh;
+}
+
+.dark-mode {
+  background-color: #131335;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+.dark-mode h3 {
+  color: white;
+}
+
+.cours {
+  font-family: "Hanalei Fill", cursive;
+  color: #131335;
+  margin-top: 20px;
+}
+
+.see {
+  padding-top: 70px;
+  font-family: "Goudy Old Style";
+  color: #b71b0a;
+}

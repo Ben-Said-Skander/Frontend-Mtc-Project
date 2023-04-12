@@ -64,7 +64,8 @@ export default function SignIn() {
             />
             <a href="#">Mot de passe oublié?</a>
             <button className={style.buttonSign} onClick={handleClick}>
-              s'identifier
+              {" "}
+              <Link to="/AllTeachers"> S'identifier</Link>
             </button>
           </form>
         </div>

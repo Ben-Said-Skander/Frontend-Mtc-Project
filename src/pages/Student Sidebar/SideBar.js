@@ -28,7 +28,7 @@ const ClassSidebar = () => {
             <ul className={styles.menu_links}>
 
             <li className={styles.nav_link}>
-                <a className={styles.a} href="../ListFiles">
+                <a className={styles.a} href="../AllTeachers">
                   <i
                     className={
                       styles.i +
@@ -39,7 +39,7 @@ const ClassSidebar = () => {
                     }
                   ></i>
                   <span className={`${styles.text} ${styles.nav_text}`}>
-                    Ma Classe
+                    Mes Profs
                   </span>
                 </a>
               </li>

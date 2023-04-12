@@ -68,7 +68,7 @@ export default function AddFiles() {
       <TeacherSidebar />
   
       <form>
-        <h3>Télécharger Fichiers</h3>
+        <h3 className={style.title}>Télécharger des Fichiers</h3>
         <input
           type="file"
           className={style.boxUpload}

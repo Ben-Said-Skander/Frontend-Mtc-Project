@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
-import Header from "../Header/Header";
-import Search from "../Search Component/Search";
-import Profs from "../../Instructors Page/Instructor List/InstructorList";
+import Header from "../../Courses Page/Header/Header";
+import Search from "../../Courses Page/Search Component/Search";
+import Profs from "../../My Teachers/All Teachers/All Teachers";
 import { Link } from "react-router-dom";
 import style from "./styles.module.css";
 import Sidebar from "../../Student Sidebar/SideBar";
-export default function AllCourses() {
+export default function AllTeachers() {
   const [profs, setProfs] = useState([
     {
       id: nanoid(),
@@ -58,27 +58,14 @@ export default function AllCourses() {
           <Header handleToggleDarkMode={setDarkMode} />
           <br></br>
           <Search handleSearchCourse={setSearchName} className={style.searchh} />
-          <h1 className={style.see}>Tout les cours</h1>
+          <h1 className={style.see}>Mes Profs</h1>
 
-          <h2 className={style.cours}>Math</h2>
+         
           <Profs
             profs={profs.filter((prof) =>
               prof.name.toLowerCase().includes(searchName)
             )}
           />
-          <h2 className={style.cours}>Phy</h2>
-          <Profs
-            profs={profs.filter((prof) =>
-              prof.name.toLowerCase().includes(searchName)
-            )}
-          />
-          <h2 className={style.cours}>Gym</h2>
-          <Profs
-            profs={profs.filter((prof) =>
-              prof.name.toLowerCase().includes(searchName)
-            )}
-          />
-          <br></br>
         
         </div>
       </div>{" "}

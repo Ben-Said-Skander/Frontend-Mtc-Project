@@ -37,7 +37,22 @@ const TeacherSidebar = () => {
                   </span>
                 </a>
               </li>
-
+              <li className={styles.nav_link}>
+                <a className={styles.a} href="../AllStudents">
+                  <i
+                    className={
+                      styles.i +
+                      " " +
+                      styles.icon +
+                      " " +
+                      "fa fa-graduation-cap "
+                    }
+                  ></i>
+                  <span className={`${styles.text} ${styles.nav_text}`}>
+                    Mes Etudiants
+                  </span>
+                </a>
+              </li>
               <li className={styles.nav_link}>
                 <a className={styles.a} href="../Demands">
                   <i
